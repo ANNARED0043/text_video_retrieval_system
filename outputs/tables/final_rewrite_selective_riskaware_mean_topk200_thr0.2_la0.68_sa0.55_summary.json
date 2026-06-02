@@ -1,0 +1,29 @@
+{
+  "schema_version": "retrieval_summary_v1",
+  "task": "text_to_video_retrieval",
+  "mode": "rewrite_selective_riskaware",
+  "dataset": "MSR-VTT",
+  "protocol": "1kA",
+  "manifest": "msrvtt_fixed_1kA.jsonl",
+  "queries": "msrvtt_1kA_test_queries.jsonl",
+  "pooling": "mean",
+  "topk_segments": 200,
+  "queries_planned": 200,
+  "queries_evaluated": 200,
+  "R@1": 46.5,
+  "R@5": 66.5,
+  "R@10": 74.0,
+  "MedR": 2.0,
+  "MnR": 15.555,
+  "avg_search_ms": 40.518,
+  "rewrite_rate": 0.645,
+  "tokens": {
+    "input": 19351,
+    "output": 2155,
+    "total": 21506
+  },
+  "model": {
+    "retriever_text_encoder": "open_clip:ViT-H-14/laion2b_s32b_b79k",
+    "llm": "gpt-4.1-mini"
+  }
+}

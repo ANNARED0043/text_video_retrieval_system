@@ -1,0 +1,11 @@
+{
+  "stage_label": "continual_ab_relaxed_memory_1kA_train500_eval200_v1",
+  "time": "2026-04-23T20:24:45",
+  "metrics": {
+    "R@1": 50.5,
+    "R@5": 64.5,
+    "R@10": 74.0
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_ab_relaxed_memory_1kA_train500_eval200_v1.json"
+}

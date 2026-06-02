@@ -1,0 +1,17 @@
+{
+  "video_id": "video8673",
+  "segment_id": "video8673_seg0000",
+  "summary": "A man discusses SpongeBob and friends being mutants with images of the characters shown beside him.",
+  "tags": [
+    "man speaking",
+    "SpongeBob characters",
+    "animated characters",
+    "text \"#7 SpongeBob & Friends are Mutants\""
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 44,
+    "total_tokens": 472
+  }
+}

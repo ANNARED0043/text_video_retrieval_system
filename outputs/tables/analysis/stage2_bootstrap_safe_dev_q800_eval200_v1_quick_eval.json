@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage2_bootstrap_safe_dev_q800_eval200_v1",
+  "time": "2026-04-09T22:50:35",
+  "metrics": {
+    "R@1": 41.0,
+    "R@5": 62.5,
+    "R@10": 71.5
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage2_bootstrap_safe_dev_q800_eval200_v1.json"
+}

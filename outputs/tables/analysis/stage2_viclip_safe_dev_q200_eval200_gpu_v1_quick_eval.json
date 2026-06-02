@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage2_viclip_safe_dev_q200_eval200_gpu_v1",
+  "time": "2026-04-10T01:56:08",
+  "metrics": {
+    "R@1": 39.0,
+    "R@5": 60.5,
+    "R@10": 71.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage2_viclip_safe_dev_q200_eval200_gpu_v1.json"
+}

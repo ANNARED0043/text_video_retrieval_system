@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage1_viclip_topk30_q600_quick200_selective_bucket20_v1",
+  "time": "2026-04-07T23:54:46",
+  "metrics": {
+    "R@1": 48.0,
+    "R@5": 66.5,
+    "R@10": 73.5
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage1_viclip_topk30_q600_quick200_selective_bucket20_v1.json"
+}

@@ -1,0 +1,26 @@
+{
+  "time": "2026-04-07T22:48:18",
+  "quick_pass": true,
+  "full_pass": null,
+  "candidate_quick": {
+    "R@1": 48.5,
+    "R@5": 66.0,
+    "R@10": 73.5
+  },
+  "reference_quick": {
+    "R@1": 47.0,
+    "R@5": 65.0,
+    "R@10": 72.0
+  },
+  "quick_delta": {
+    "R@1": 1.5,
+    "R@5": 1.0,
+    "R@10": 1.5
+  },
+  "full_delta": {},
+  "policy": {
+    "min_quick_r1": 48.0,
+    "min_r5_gain": 1.0,
+    "min_r10_gain": 1.0
+  }
+}

@@ -1,0 +1,1067 @@
+{
+  "stage_label": "stage4_safe_dev_inference_weight_sweep_v1",
+  "time": "2026-05-04T19:01:20",
+  "eval_manifest": "msrvtt_fixed_safe_dev.jsonl",
+  "eval_queries": "msrvtt_train_9k_safe_dev_queries.jsonl",
+  "eval_rows_used": 200,
+  "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAfull_lowmem_v1.pt",
+  "alignment_teacher": "outputs\\tables\\analysis\\multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+  "multiview_features": "outputs\\tables\\analysis\\multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz",
+  "multiview_pooling": "attention",
+  "query_aware_fusion": true,
+  "results": [
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.0,
+        "R@10": 71.5,
+        "MnR": 38.225,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 62.5,
+        "R@10": 72.0,
+        "MnR": 38.62,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 72.5,
+        "MnR": 38.89,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 63.0,
+        "R@10": 72.5,
+        "MnR": 39.24,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 63.0,
+        "R@10": 72.0,
+        "MnR": 38.05,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 63.0,
+        "R@10": 72.0,
+        "MnR": 38.4,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.0,
+        "R@10": 72.5,
+        "MnR": 38.665,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 64.0,
+        "R@10": 72.5,
+        "MnR": 39.0,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 63.0,
+        "R@10": 72.5,
+        "MnR": 37.845,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 63.0,
+        "R@10": 72.0,
+        "MnR": 38.2,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 72.5,
+        "MnR": 38.45,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 64.0,
+        "R@10": 72.5,
+        "MnR": 38.72,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 63.5,
+        "R@10": 72.5,
+        "MnR": 37.645,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 63.5,
+        "R@10": 72.0,
+        "MnR": 38.025,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 72.5,
+        "MnR": 38.28,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.0,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 72.5,
+        "MnR": 38.545,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 39.55,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 71.0,
+        "MnR": 39.96,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.5,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 40.235,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 71.0,
+        "MnR": 40.54,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 71.5,
+        "MnR": 39.315,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 41.0,
+        "R@5": 64.0,
+        "R@10": 71.0,
+        "MnR": 39.72,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 39.975,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 40.27,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 39.055,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 41.0,
+        "R@5": 64.5,
+        "R@10": 72.0,
+        "MnR": 39.44,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 39.74,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 40.015,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 71.5,
+        "MnR": 38.83,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 41.0,
+        "R@5": 64.5,
+        "R@10": 72.0,
+        "MnR": 39.28,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 72.0,
+        "MnR": 39.56,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.05,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 71.5,
+        "MnR": 39.81,
+        "MedR": 2.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 69.5,
+        "MnR": 40.47,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.88,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 70.0,
+        "MnR": 41.235,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 62.5,
+        "R@10": 69.5,
+        "MnR": 41.625,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 70.0,
+        "MnR": 40.175,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.5,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.57,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.895,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 63.5,
+        "R@10": 70.0,
+        "MnR": 41.285,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 70.0,
+        "MnR": 39.9,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.34,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.6,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.905,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.5,
+        "R@10": 70.0,
+        "MnR": 39.665,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 40.0,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.15,
+        "MedR": 2.5
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.5,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.385,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.08,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 64.0,
+        "R@10": 70.0,
+        "MnR": 40.655,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.5,
+        "R@10": 69.0,
+        "MnR": 41.055,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.5,
+        "R@10": 69.0,
+        "MnR": 41.575,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.5,
+        "R@10": 69.5,
+        "MnR": 41.925,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.24,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 63.0,
+        "R@10": 69.0,
+        "MnR": 40.785,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.5,
+        "R@10": 69.0,
+        "MnR": 41.27,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.5,
+        "R@10": 69.5,
+        "MnR": 41.585,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.5,
+        "R@10": 69.5,
+        "MnR": 41.94,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 64.0,
+        "R@10": 69.0,
+        "MnR": 40.565,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.5,
+        "R@5": 62.5,
+        "R@10": 69.0,
+        "MnR": 41.0,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.5,
+        "R@10": 69.5,
+        "MnR": 41.315,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 63.0,
+        "R@10": 69.5,
+        "MnR": 41.585,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 39.0,
+        "R@5": 65.0,
+        "R@10": 69.0,
+        "MnR": 40.28,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.5,
+        "R@5": 63.5,
+        "R@10": 69.0,
+        "MnR": 40.73,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 63.0,
+        "R@10": 69.5,
+        "MnR": 41.005,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.1,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 63.0,
+        "R@10": 69.5,
+        "MnR": 41.335,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.88,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.355,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.655,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.06,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 36.5,
+        "R@5": 61.5,
+        "R@10": 68.5,
+        "MnR": 42.97,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.525,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.02,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.265,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.08,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.59,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.185,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.74,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.97,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.1,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 42.25,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.0,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 40.895,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.04,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 38.0,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.405,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.06,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.0,
+        "R@10": 69.0,
+        "MnR": 41.695,
+        "MedR": 3.0
+      }
+    },
+    {
+      "alignment_teacher_weight": 0.12,
+      "multiview_weight": 0.12,
+      "component_view_weight": 0.08,
+      "augmented_adapter": {
+        "N": 200,
+        "R@1": 37.5,
+        "R@5": 62.5,
+        "R@10": 69.0,
+        "MnR": 41.915,
+        "MedR": 3.0
+      }
+    }
+  ],
+  "best": {
+    "alignment_teacher_weight": 0.05,
+    "multiview_weight": 0.12,
+    "component_view_weight": 0.04,
+    "augmented_adapter": {
+      "N": 200,
+      "R@1": 41.0,
+      "R@5": 64.5,
+      "R@10": 72.0,
+      "MnR": 39.28,
+      "MedR": 2.0
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="figure3-3" name="图3-3 核心方法消融实验设计">
+    <mxGraphModel dx="1225" dy="745" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="base" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontFamily=SimSun;fontSize=15;" value="0：基础召回模型&lt;br&gt;全局视频表示 + FAISS 检索" vertex="1">
+          <mxGeometry height="82" width="200" x="105" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontFamily=SimSun;fontSize=15;" value="1：加入 Alignment Teacher&lt;br&gt;局部语义监督" vertex="1">
+          <mxGeometry height="82" width="220" x="95" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="gate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontFamily=SimSun;fontSize=15;" value="2：加入门控校准&lt;br&gt;约束教师噪声影响" vertex="1">
+          <mxGeometry height="82" width="220" x="95" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="targets" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fontFamily=SimSun;fontSize=15;" value="3：引入教师目标集合&lt;br&gt;强化目标视频监督" vertex="1">
+          <mxGeometry height="82" width="220" x="95" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="uLFm8cLpI3_7Qsleffdk-1" edge="1" parent="1" source="mv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="targets" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2.8;fontFamily=SimSun;fontSize=15;fontStyle=1;" value="4：Alignment + Multiview&lt;br&gt;多视角视频特征融合&lt;br&gt;当前主结果" vertex="1">
+          <mxGeometry height="100" width="260" x="75" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="hq" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F9FAFB;strokeColor=#6B7280;strokeWidth=1.8;fontFamily=SimSun;fontSize=15;" value="5：扩大高质量样本筛选&lt;br&gt;检验是否仅由样本数量驱动" vertex="1">
+          <mxGeometry height="92" width="260" x="420" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="base" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="teacher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="teacher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="targets">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="targets" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=light-dark(#030303, #81abff);strokeWidth=2.4;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;" target="mv" value="核心路线">
+          <mxGeometry relative="1" x="-0.0045" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="mv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6B7280;strokeWidth=1.6;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="hq" value="扩展检验">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

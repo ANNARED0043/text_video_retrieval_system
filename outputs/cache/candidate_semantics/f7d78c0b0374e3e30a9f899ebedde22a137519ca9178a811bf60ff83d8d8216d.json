@@ -1,0 +1,21 @@
+{
+  "video_id": "video8799",
+  "segment_id": "video8799_seg0000",
+  "summary": "Animated letters with faces and arms appear in a spotlight on a wooden floor.",
+  "tags": [
+    "animated letters",
+    "spotlight",
+    "wooden floor",
+    "cartoon",
+    "character",
+    "face",
+    "arms",
+    "rocking chair"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 38,
+    "total_tokens": 466
+  }
+}

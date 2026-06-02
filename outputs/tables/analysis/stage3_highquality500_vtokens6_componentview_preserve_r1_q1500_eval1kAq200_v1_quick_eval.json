@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage3_highquality500_vtokens6_componentview_preserve_r1_q1500_eval1kAq200_v1",
+  "time": "2026-05-01T22:21:44",
+  "metrics": {
+    "R@1": 48.5,
+    "R@5": 64.5,
+    "R@10": 72.5
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_highquality500_vtokens6_componentview_preserve_r1_q1500_eval1kAq200_v1.json"
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "auto_continual_feedback_v2",
+  "time": "2026-04-24T00:45:06",
+  "run_id": "20260424_004506_hybrid_elite_safe_dev",
+  "strategy": "hybrid_elite",
+  "strategy_description": "DiscoVLA-style discrepancy reduction + TokenBinder-style one-to-many candidate comparison + conservative memory replay.",
+  "paper_basis": [
+    "DiscoVLA CVPR 2025",
+    "TokenBinder WACV 2025",
+    "MAMA 2026"
+  ],
+  "eval_split": "safe_dev",
+  "rounds": [
+    {
+      "round": 1,
+      "selected_candidate_label": "round01_c01",
+      "selected_summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\round01_c01_summary.json",
+      "all_candidates": [
+        {
+          "round": 1,
+          "candidate": 1,
+          "label": "round01_c01",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\round01_c01_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "DiscoVLA-style discrepancy reduction + TokenBinder-style one-to-many candidate comparison + conservative memory replay.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025",
+              "MAMA 2026"
+            ],
+            "candidates_per_round": 3,
+            "max_train_queries": 1000,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 20,
+            "teacher_max_gt_rank": 20,
+            "teacher_max_uncertainty": 0.992,
+            "teacher_min_margin": 0.003,
+            "acceptance_max_teacher_rank": 20,
+            "acceptance_max_uncertainty": 0.992,
+            "memory_refresh_topk": 360,
+            "memory_augmented_weight": 0.075,
+            "alignment_teacher_weight": 0.085,
+            "multiview_weight": 0.085,
+            "component_alignment_weight": 0.065,
+            "teacher_pairwise_weight": 0.065,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.11,
+            "video_aggregation_weight": 0.2
+          },
+          "effective_max_train_queries": 500,
+          "init_checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        },
+        {
+          "round": 1,
+          "candidate": 2,
+          "label": "round01_c02",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\round01_c02_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "DiscoVLA-style discrepancy reduction + TokenBinder-style one-to-many candidate comparison + conservative memory replay.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025",
+              "MAMA 2026"
+            ],
+            "candidates_per_round": 3,
+            "max_train_queries": 1000,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 20,
+            "teacher_max_gt_rank": 20,
+            "teacher_max_uncertainty": 0.992,
+            "teacher_min_margin": 0.003,
+            "acceptance_max_teacher_rank": 20,
+            "acceptance_max_uncertainty": 0.992,
+            "memory_refresh_topk": 360,
+            "memory_augmented_weight": 0.0675,
+            "alignment_teacher_weight": 0.09350000000000001,
+            "multiview_weight": 0.085,
+            "component_alignment_weight": 0.07475,
+            "teacher_pairwise_weight": 0.08125,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.11,
+            "video_aggregation_weight": 0.2
+          },
+          "effective_max_train_queries": 500,
+          "init_checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        },
+        {
+          "round": 1,
+          "candidate": 3,
+          "label": "round01_c03",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\round01_c03_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "DiscoVLA-style discrepancy reduction + TokenBinder-style one-to-many candidate comparison + conservative memory replay.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025",
+              "MAMA 2026"
+            ],
+            "candidates_per_round": 3,
+            "max_train_queries": 1000,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 20,
+            "teacher_max_gt_rank": 20,
+            "teacher_max_uncertainty": 0.9949759999999999,
+            "teacher_min_margin": 0.00255,
+            "acceptance_max_teacher_rank": 20,
+            "acceptance_max_uncertainty": 0.9949759999999999,
+            "memory_refresh_topk": 450,
+            "memory_augmented_weight": 0.09375,
+            "alignment_teacher_weight": 0.085,
+            "multiview_weight": 0.085,
+            "component_alignment_weight": 0.065,
+            "teacher_pairwise_weight": 0.065,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.11,
+            "video_aggregation_weight": 0.2
+          },
+          "effective_max_train_queries": 500,
+          "init_checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        }
+      ],
+      "quality": {
+        "quality_score": 0.0,
+        "quality_accepted": false,
+        "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+        "delta_vs_run_baseline": {},
+        "delta_vs_active_best": {}
+      },
+      "accepted": false,
+      "promoted": false,
+      "promotion": {
+        "promoted": false,
+        "reason": "Dry run."
+      },
+      "state": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\round01_continual_state.json",
+      "reason": "Rejected by quality gate: R@1 gain vs active best is below min_quality_r1_gain=0.01."
+    }
+  ],
+  "quality_success_rate": 0.0,
+  "promotion_success_rate": 0.0,
+  "target_success_rate": 0.8,
+  "target_met": false,
+  "diagnosis_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_004506_hybrid_elite_safe_dev\\diagnosis.json"
+}

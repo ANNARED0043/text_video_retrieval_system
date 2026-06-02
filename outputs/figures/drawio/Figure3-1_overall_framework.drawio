@@ -1,0 +1,176 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="figure3-1" name="图3-1 本文自然语言视频检索方法总体框架">
+    <mxGraphModel dx="1447" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_data" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;fontFamily=SimSun;fontSize=15;fontStyle=1;fontColor=#1F2937;align=left;spacingLeft=16;verticalAlign=top;spacingTop=10;" value="离线视频表示与索引构建" vertex="1">
+          <mxGeometry height="190" width="1280" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_online" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FFFFFF;strokeColor=#D1D5DB;strokeWidth=1.5;fontFamily=SimSun;fontSize=15;fontStyle=1;fontColor=#1F2937;align=left;spacingLeft=16;verticalAlign=top;spacingTop=10;" value="在线查询与系统型候选优化" vertex="1">
+          <mxGeometry height="180" width="1280" x="60" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_enhance" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=3;fontFamily=SimSun;fontSize=16;fontStyle=1;fontColor=#1D4ED8;align=left;spacingLeft=16;verticalAlign=top;spacingTop=10;" value="细粒度表征增强层（本文核心方法）" vertex="1">
+          <mxGeometry height="230" width="1280" x="60" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_output" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FAFAFA;strokeColor=#D1D5DB;strokeWidth=1.5;fontFamily=SimSun;fontSize=15;fontStyle=1;fontColor=#1F2937;align=left;spacingLeft=16;verticalAlign=top;spacingTop=10;" value="结果输出与反馈记录" vertex="1">
+          <mxGeometry height="100" width="1280" x="60" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="video_lib" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="视频库" vertex="1">
+          <mxGeometry height="54" width="120" x="110" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="segment" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="视频片段化" vertex="1">
+          <mxGeometry height="54" width="130" x="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="vl_feature" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="视觉语言特征提取" vertex="1">
+          <mxGeometry height="54" width="160" x="500" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="faiss" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="FAISS 向量索引" vertex="1">
+          <mxGeometry height="54" width="150" x="730" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="offline_cache" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#F9FAFB;strokeColor=#64748B;strokeWidth=1.4;fontFamily=SimSun;fontSize=14;fontColor=#374151;" value="离线特征缓存" vertex="1">
+          <mxGeometry height="86" width="130" x="970" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_v1" edge="1" parent="1" source="video_lib" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="segment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_v2" edge="1" parent="1" source="segment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="vl_feature">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_v3" edge="1" parent="1" source="vl_feature" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="faiss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_v4" edge="1" parent="1" source="vl_feature" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.4;endArrow=block;endFill=1;curved=1;" target="offline_cache">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="150" />
+              <mxPoint x="1035" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_v5" edge="1" parent="1" source="offline_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.4;endArrow=block;endFill=1;" target="faiss">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="query" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="输入查询" vertex="1">
+          <mxGeometry height="54" width="120" x="110" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="rewrite" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#6B7280;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="选择性查询改写" vertex="1">
+          <mxGeometry height="54" width="150" x="300" y="372" as="geometry" />
+        </mxCell>
+        <mxCell id="recall" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="基础候选召回" vertex="1">
+          <mxGeometry height="54" width="150" x="520" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="rerank" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#6B7280;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="候选重排序" vertex="1">
+          <mxGeometry height="54" width="140" x="760" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="candidate_pool" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F9FAFB;strokeColor=#64748B;strokeWidth=1.4;fontFamily=SimSun;fontSize=14;fontColor=#374151;" value="Top-K 候选集合" vertex="1">
+          <mxGeometry height="54" width="145" x="980" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_q1" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="recall">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="437" />
+              <mxPoint x="260" y="437" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_q2" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6B7280;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;" target="rewrite">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_q3" edge="1" parent="1" source="rewrite" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6B7280;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="recall" value="改写后查询">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_q4" edge="1" parent="1" source="faiss" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="recall" value="索引检索">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="805" y="310" />
+              <mxPoint x="595" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_q5" edge="1" parent="1" source="recall" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="rerank">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_q6" edge="1" parent="1" source="rerank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="candidate_pool">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="align_teacher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2.2;fontFamily=SimSun;fontSize=15;fontColor=#1E3A8A;" value="alignment teacher&#xa;局部语义对齐监督" vertex="1">
+          <mxGeometry height="72" width="190" x="160" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="multiview" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2.2;fontFamily=SimSun;fontSize=15;fontColor=#1E3A8A;" value="多视角视频特征&#xa;帧级 / 片段级 / 视角级表示" vertex="1">
+          <mxGeometry height="72" width="220" x="450" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="student" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#1D4ED8;strokeWidth=2.6;fontFamily=SimSun;fontSize=15;fontStyle=1;fontColor=#111827;" value="学生检索模型&#xa;细粒度表征学习与排序校准" vertex="1">
+          <mxGeometry height="88" width="230" x="790" y="612" as="geometry" />
+        </mxCell>
+        <mxCell id="enhanced_score" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=2;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="增强相似度评分" vertex="1">
+          <mxGeometry height="60" width="160" x="1140" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_e1" edge="1" parent="1" source="align_teacher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;curved=1;" target="student" value="教师软标签 / 局部对齐分数">
+          <mxGeometry relative="1" x="0.0123" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="255" y="580" />
+              <mxPoint x="905" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_e2" edge="1" parent="1" source="multiview" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;" target="student" value="多视角视频证据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_e3" edge="1" parent="1" source="candidate_pool" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="student" value="候选输入">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1053" y="550" />
+              <mxPoint x="905" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_e4" edge="1" parent="1" source="student" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;" target="enhanced_score">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_cache_to_mv" edge="1" parent="1" source="offline_cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="multiview" value="视频侧特征">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1035" y="290" />
+              <mxPoint x="560" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_query_to_teacher" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="align_teacher" value="查询语义成分">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="500" />
+              <mxPoint x="255" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;fontColor=#111827;" value="检索结果输出&#xa;Top-5 / GT Rank / 视频播放" vertex="1">
+          <mxGeometry height="58" width="230" x="520" y="806" as="geometry" />
+        </mxCell>
+        <mxCell id="feedback" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#F9FAFB;strokeColor=#64748B;strokeWidth=1.4;fontFamily=SimSun;fontSize=14;fontColor=#374151;" value="反馈日志&#xa;失败样本 / 用户反馈 / 学习记录" vertex="1">
+          <mxGeometry height="80" width="230" x="910" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_o1" edge="1" parent="1" source="enhanced_score" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="result">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="780" />
+              <mxPoint x="635" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_o2" edge="1" parent="1" source="result" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4B5563;strokeWidth=1.5;endArrow=block;endFill=1;" target="feedback">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_feedback" edge="1" parent="1" source="feedback" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;" target="align_teacher" value="错误驱动反馈">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="910" />
+              <mxPoint x="255" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

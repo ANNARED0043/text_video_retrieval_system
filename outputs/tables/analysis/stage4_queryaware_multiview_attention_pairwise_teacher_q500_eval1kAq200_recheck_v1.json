@@ -1,0 +1,67 @@
+{
+  "stage_label": "stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAq200_recheck_v1",
+  "time": "2026-05-06T12:12:56",
+  "eval_manifest": "msrvtt_fixed_1kA.jsonl",
+  "eval_queries": "msrvtt_1kA_test_queries.jsonl",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "eval_rows_used": 200,
+  "artifacts": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAq200_recheck_v1.json",
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAfull_lowmem_v1.pt",
+    "semantic_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\semantic_memory.json",
+    "alignment_teacher": "outputs\\tables\\analysis\\multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+    "alignment_teacher_weight": 0.1,
+    "multiview_features": "outputs\\tables\\analysis\\multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz",
+    "multiview_weight": 0.1,
+    "multiview_pooling": "attention",
+    "video_temporal_adapter_weight": 0.0,
+    "component_view_weight": 0.08,
+    "query_aware_fusion": true
+  },
+  "methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 48.0,
+      "R@5": 65.0,
+      "R@10": 74.0,
+      "MnR": 21.145,
+      "MedR": 2.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 49.5,
+      "R@5": 66.5,
+      "R@10": 75.5,
+      "MnR": 20.145,
+      "MedR": 2.0
+    }
+  },
+  "augmented_methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 49.5,
+      "R@5": 65.5,
+      "R@10": 76.0,
+      "MnR": 21.615,
+      "MedR": 2.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 51.0,
+      "R@5": 66.0,
+      "R@10": 77.0,
+      "MnR": 20.785,
+      "MedR": 1.0
+    }
+  },
+  "best_method": "adapter",
+  "best_metrics": {
+    "N": 200,
+    "R@1": 49.5,
+    "R@5": 66.5,
+    "R@10": 75.5,
+    "MnR": 20.145,
+    "MedR": 2.0
+  }
+}

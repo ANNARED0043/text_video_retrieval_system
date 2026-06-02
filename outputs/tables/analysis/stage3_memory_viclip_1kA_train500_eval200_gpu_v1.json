@@ -1,0 +1,114 @@
+{
+  "stage_label": "stage3_memory_viclip_1kA_train500_eval200_gpu_v1",
+  "time": "2026-04-11T00:20:55",
+  "train_manifest": "msrvtt_fixed.jsonl",
+  "train_queries": "msrvtt_train_9k_safe_train_queries.jsonl",
+  "eval_manifest": "msrvtt_fixed_1kA.jsonl",
+  "eval_queries": "msrvtt_1kA_test_queries.jsonl",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "techniques": {
+    "hard_negative_mining": true,
+    "prototype_aware_learning": true,
+    "constraint_memory_sampling": true,
+    "teacher_soft_labels": true,
+    "late_interaction_bonus": true,
+    "teacher_mode": "external_teacher_supervision",
+    "target_main_teacher": "ViCLIP",
+    "residual_scale": 0.35,
+    "adapter_mode": "gated",
+    "selective_rank_min": 1,
+    "selective_rank_max": 100,
+    "teacher_listwise_topk": 10,
+    "sampler_mode": "memory",
+    "hard_negative_mode": "teacher_hybrid",
+    "teacher_temperature": 0.07,
+    "prototype_teacher_weight": 0.08,
+    "structured_prototype_weight": 0.1,
+    "video_aggregation_weight": 0.2,
+    "teacher_reliability_gating": true,
+    "teacher_max_gt_rank": 10,
+    "teacher_min_margin": 0.005,
+    "teacher_max_uncertainty": 0.98,
+    "distill_candidate_topk": 24,
+    "false_negative_margin": 0.02,
+    "uncertainty_aware_temperature": false,
+    "teacher_temperature_min": 0.05,
+    "teacher_temperature_max": 0.11,
+    "stage_key": "stage3",
+    "acceptance_gated_memory": true,
+    "acceptance_max_teacher_rank": 10,
+    "acceptance_max_uncertainty": 0.98,
+    "acceptance_min_overlap": 0.0,
+    "memory_refresh_topk": 200
+  },
+  "train_stats": {
+    "train_loss": 3.155124,
+    "epochs": 1,
+    "train_queries": 396
+  },
+  "train_rows_used": 396,
+  "train_rows_before_filter": 500,
+  "eval_rows_used": 200,
+  "memory_stats": {
+    "candidates": 500,
+    "accepted": 129,
+    "acceptance_rate": 0.258,
+    "memory_topk": 200
+  },
+  "methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 47.5,
+      "R@5": 65.0,
+      "R@10": 72.0,
+      "MnR": 20.785,
+      "MedR": 2.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 47.5,
+      "R@5": 66.5,
+      "R@10": 73.5,
+      "MnR": 20.67,
+      "MedR": 2.0
+    },
+    "fused88": {
+      "alpha": 0.88,
+      "R@1": 47.5,
+      "R@5": 65.18,
+      "R@10": 72.18,
+      "MnR": 20.7712
+    },
+    "fused90": {
+      "alpha": 0.9,
+      "R@1": 47.5,
+      "R@5": 65.15,
+      "R@10": 72.15,
+      "MnR": 20.7735
+    },
+    "fused92": {
+      "alpha": 0.92,
+      "R@1": 47.5,
+      "R@5": 65.12,
+      "R@10": 72.12,
+      "MnR": 20.7758
+    }
+  },
+  "best_method": "baseline",
+  "best_metrics": {
+    "N": 200,
+    "R@1": 47.5,
+    "R@5": 65.0,
+    "R@10": 72.0,
+    "MnR": 20.785,
+    "MedR": 2.0
+  },
+  "artifacts": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_viclip_1kA_train500_eval200_gpu_v1.json",
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_viclip_1kA_train500_eval200_gpu_v1.pt",
+    "quick_eval_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_viclip_1kA_train500_eval200_gpu_v1_quick_eval.json",
+    "semantic_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\semantic_memory.json",
+    "stage3_memory_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_viclip_1kA_train500_eval200_gpu_v1_memory.json"
+  }
+}

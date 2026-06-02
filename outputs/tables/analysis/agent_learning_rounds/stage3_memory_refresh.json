@@ -1,0 +1,11 @@
+{
+  "time": "2026-03-23T15:12:38",
+  "prototype_memory": "active",
+  "hard_negative_memory": "active",
+  "constraint_memory": "active",
+  "acceptance_gate": [
+    "train improves",
+    "validation improves",
+    "1kA improves"
+  ]
+}

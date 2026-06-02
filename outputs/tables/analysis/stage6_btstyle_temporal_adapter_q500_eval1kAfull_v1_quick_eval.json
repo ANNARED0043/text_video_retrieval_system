@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage6_btstyle_temporal_adapter_q500_eval1kAfull_v1",
+  "time": "2026-05-04T19:24:13",
+  "metrics": {
+    "R@1": 39.1,
+    "R@5": 61.9,
+    "R@10": 72.1
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage6_btstyle_temporal_adapter_q500_eval1kAfull_v1.json"
+}

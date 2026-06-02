@@ -1,0 +1,79 @@
+{
+  "time": "2026-03-23T12:11:33",
+  "dataset": "MSR-VTT",
+  "protocol": "msrvtt_fixed_1kA",
+  "model_name": "ViT-H-14",
+  "pretrained": "laion2b_s32b_b79k",
+  "queries": 5000,
+  "cutoffs": [
+    1,
+    5,
+    10,
+    20,
+    30,
+    40,
+    50
+  ],
+  "recall_points": [
+    {
+      "k": 1,
+      "recall": 39.0
+    },
+    {
+      "k": 5,
+      "recall": 61.86
+    },
+    {
+      "k": 10,
+      "recall": 71.24
+    },
+    {
+      "k": 20,
+      "recall": 79.98
+    },
+    {
+      "k": 30,
+      "recall": 83.78
+    },
+    {
+      "k": 40,
+      "recall": 86.36
+    },
+    {
+      "k": 50,
+      "recall": 88.3
+    }
+  ],
+  "incremental_gains": [
+    {
+      "from_k": 1,
+      "to_k": 5,
+      "gain": 22.86
+    },
+    {
+      "from_k": 5,
+      "to_k": 10,
+      "gain": 9.38
+    },
+    {
+      "from_k": 10,
+      "to_k": 20,
+      "gain": 8.74
+    },
+    {
+      "from_k": 20,
+      "to_k": 30,
+      "gain": 3.8
+    },
+    {
+      "from_k": 30,
+      "to_k": 40,
+      "gain": 2.58
+    },
+    {
+      "from_k": 40,
+      "to_k": 50,
+      "gain": 1.94
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "video_id": "video7835",
+  "segment_id": "video7835_seg0000",
+  "summary": "SpongeBob and Patrick are excited, and a fish character is holding a claw in front of a Krabby Patty stand.",
+  "tags": [
+    "SpongeBob",
+    "Patrick",
+    "fish character",
+    "claw",
+    "Krabby Patty signs",
+    "underwater",
+    "animated characters",
+    "colorful background"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 51,
+    "total_tokens": 479
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "stage_label": "auto_v35_plus_round01_c03",
+  "time": "2026-04-23T22:05:50",
+  "metrics": {
+    "R@1": 49.5,
+    "R@5": 65.0,
+    "R@10": 74.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_220215_v35_plus_1kA\\round01_c03_summary.json"
+}

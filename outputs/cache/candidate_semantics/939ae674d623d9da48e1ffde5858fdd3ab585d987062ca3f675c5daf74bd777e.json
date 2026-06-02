@@ -1,0 +1,22 @@
+{
+  "video_id": "video9828",
+  "segment_id": "video9828_seg0000",
+  "summary": "Paris Hilton holds a baby kinkajou named Baby Luv, and Dan Bilzerian holds a pet goat named Zeus.",
+  "tags": [
+    "Paris Hilton",
+    "baby kinkajou",
+    "small animal",
+    "Dan Bilzerian",
+    "pet goat",
+    "outdoor",
+    "close-up",
+    "sunglasses",
+    "denim jacket"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 58,
+    "total_tokens": 486
+  }
+}

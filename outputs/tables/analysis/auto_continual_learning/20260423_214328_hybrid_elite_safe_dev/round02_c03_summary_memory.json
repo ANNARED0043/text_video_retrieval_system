@@ -1,0 +1,24 @@
+{
+  "schema_version": "stage3_memory_v1",
+  "accepted_qids": [],
+  "accepted_rows": [],
+  "prototype_memory": {},
+  "prototype_video_memory": {},
+  "hard_negative_memory": {},
+  "constraint_memory": {
+    "accepted_constraint_tags": [],
+    "accepted_focus_terms": []
+  },
+  "stats": {
+    "candidates": 1000,
+    "accepted": 0,
+    "acceptance_rate": 0.0,
+    "memory_topk": 450,
+    "accepted_gt_rank_mean": null,
+    "accepted_top1_is_gt": 0,
+    "accepted_top1_is_gt_rate": null,
+    "accepted_uncertainty_mean": null,
+    "accepted_prototype_overlap_mean": null,
+    "accepted_alignment_overlap_mean": null
+  }
+}

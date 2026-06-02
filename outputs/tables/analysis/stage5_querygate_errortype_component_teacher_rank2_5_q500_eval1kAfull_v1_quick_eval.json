@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage5_querygate_errortype_component_teacher_rank2_5_q500_eval1kAfull_v1",
+  "time": "2026-05-04T18:35:29",
+  "metrics": {
+    "R@1": 38.7,
+    "R@5": 61.5,
+    "R@10": 72.2
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage5_querygate_errortype_component_teacher_rank2_5_q500_eval1kAfull_v1.json"
+}

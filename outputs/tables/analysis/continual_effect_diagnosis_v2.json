@@ -1,0 +1,131 @@
+{
+  "schema_version": "continual_effect_diagnosis_v1",
+  "time": "2026-04-23T20:27:34",
+  "current_best": {
+    "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.json",
+    "metrics": {
+      "R@1": 50.5,
+      "R@5": 64.5,
+      "R@10": 73.5,
+      "MedR": 1.0,
+      "MnR": 20.42
+    }
+  },
+  "runs": [
+    {
+      "label": "no_memory",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_ab_no_memory_1kA_train500_eval200_v1.json",
+      "metrics": {
+        "R@1": 49.5,
+        "R@5": 66.0,
+        "R@10": 73.5,
+        "MedR": 2.0,
+        "MnR": 19.8
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.0,
+        "R@5": 1.5,
+        "R@10": 0.0,
+        "MedR": 1.0,
+        "MnR": -0.62
+      },
+      "memory_stats": {}
+    },
+    {
+      "label": "current_memory",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_ab_current_memory_1kA_train500_eval200_v1.json",
+      "metrics": {
+        "R@1": 50.5,
+        "R@5": 64.5,
+        "R@10": 73.5,
+        "MedR": 1.0,
+        "MnR": 20.42
+      },
+      "delta_vs_current_best": {
+        "R@1": 0.0,
+        "R@5": 0.0,
+        "R@10": 0.0,
+        "MedR": 0.0,
+        "MnR": 0.0
+      },
+      "memory_stats": {
+        "accepted": 222,
+        "acceptance_rate": 0.444,
+        "accepted_gt_rank_mean": 3.274775,
+        "accepted_top1_is_gt_rate": 0.477477,
+        "accepted_uncertainty_mean": 0.962969,
+        "accepted_alignment_overlap_mean": 0.109763
+      }
+    },
+    {
+      "label": "strict_memory",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_ab_strict_memory_1kA_train500_eval200_v1.json",
+      "metrics": {
+        "R@1": 50.0,
+        "R@5": 65.0,
+        "R@10": 73.5,
+        "MedR": 1.5,
+        "MnR": 20.455
+      },
+      "delta_vs_current_best": {
+        "R@1": -0.5,
+        "R@5": 0.5,
+        "R@10": 0.0,
+        "MedR": 0.5,
+        "MnR": 0.035
+      },
+      "memory_stats": {
+        "accepted": 172,
+        "acceptance_rate": 0.344,
+        "accepted_gt_rank_mean": 2.44186,
+        "accepted_top1_is_gt_rate": 0.552326,
+        "accepted_uncertainty_mean": 0.956195,
+        "accepted_alignment_overlap_mean": 0.103108
+      }
+    },
+    {
+      "label": "relaxed_memory",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_ab_relaxed_memory_1kA_train500_eval200_v1.json",
+      "metrics": {
+        "R@1": 50.5,
+        "R@5": 64.5,
+        "R@10": 74.0,
+        "MedR": 1.0,
+        "MnR": 20.395
+      },
+      "delta_vs_current_best": {
+        "R@1": 0.0,
+        "R@5": 0.0,
+        "R@10": 0.5,
+        "MedR": 0.0,
+        "MnR": -0.025
+      },
+      "memory_stats": {
+        "accepted": 271,
+        "acceptance_rate": 0.542,
+        "accepted_gt_rank_mean": 4.217712,
+        "accepted_top1_is_gt_rate": 0.405904,
+        "accepted_uncertainty_mean": 0.967733,
+        "accepted_alignment_overlap_mean": 0.111424
+      }
+    }
+  ],
+  "missing_runs": [],
+  "diagnosis": [
+    "memory 有正向证据：current_memory 比 no_memory 的 R@1 高 1.00。",
+    "注意：memory 提升 R@1 的同时降低了 R@5，说明它更偏 top1 校准，泛化召回仍需改进。",
+    "strict_memory 变差：gate 过严会减少有效训练样本，不建议收紧到当前设置。",
+    "relaxed_memory 与 current_memory 持平：需要用 feedback set 再判断是否值得放宽。",
+    "本组实验最优 candidate 是 relaxed_memory。",
+    "current_memory 没有低于 fixed reference，可作为候选继续观察。",
+    "relaxed_memory 没有低于 fixed reference，可作为候选继续观察。"
+  ],
+  "learning_effect_criteria": {
+    "memory_quantity": "accepted should increase without severe uncertainty degradation.",
+    "memory_quality": "accepted_gt_rank_mean should decrease and accepted_top1_is_gt_rate should rise.",
+    "no_forgetting": "fixed reference metrics should not drop.",
+    "feedback_gain": "a held-out or newly collected feedback set should improve across rounds.",
+    "recall_gain": "R@5/R@10 should eventually improve before reliable R@1 gains."
+  },
+  "next_action_rule": "If current_memory beats no_memory only on R@1 but hurts R@5/R@10, keep v3.5 as best and redesign continual learning around feedback/replay rather than only changing gate thresholds."
+}

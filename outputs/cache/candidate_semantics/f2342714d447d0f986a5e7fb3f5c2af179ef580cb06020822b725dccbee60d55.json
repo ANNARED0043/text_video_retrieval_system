@@ -1,0 +1,20 @@
+{
+  "video_id": "video8786",
+  "segment_id": "video8786_seg0000",
+  "summary": "Two people stand in front of a colorful backdrop, and a crowd is seen raising hands at an event.",
+  "tags": [
+    "two people",
+    "colorful backdrop",
+    "sun illustration",
+    "crowd",
+    "raised hands",
+    "event",
+    "stage"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 43,
+    "total_tokens": 471
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": "auto_continual_feedback_v2",
+  "time": "2026-04-23T21:59:10",
+  "run_id": "20260423_215910_v35_plus_1kA",
+  "strategy": "v35_plus",
+  "strategy_description": "Current-best anchored strategy. Start from the v35 50.5 R@1 setup and only explore small positive-gain perturbations around it.",
+  "paper_basis": [
+    "DiscoVLA CVPR 2025",
+    "TokenBinder WACV 2025"
+  ],
+  "eval_split": "1kA",
+  "rounds": [
+    {
+      "round": 1,
+      "selected_candidate_label": "round01_c01",
+      "selected_summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_c01_summary.json",
+      "all_candidates": [
+        {
+          "round": 1,
+          "candidate": 1,
+          "label": "round01_c01",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_c01_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "Current-best anchored strategy. Start from the v35 50.5 R@1 setup and only explore small positive-gain perturbations around it.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025"
+            ],
+            "candidates_per_round": 4,
+            "max_train_queries": 500,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 10,
+            "teacher_max_gt_rank": 12,
+            "teacher_max_uncertainty": 0.995,
+            "teacher_min_margin": 0.003,
+            "acceptance_max_teacher_rank": 12,
+            "acceptance_max_uncertainty": 0.995,
+            "memory_refresh_topk": 300,
+            "memory_augmented_weight": 0.08,
+            "alignment_teacher_weight": 0.08,
+            "multiview_weight": 0.08,
+            "component_alignment_weight": 0.0,
+            "teacher_pairwise_weight": 0.06,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.1,
+            "video_aggregation_weight": 0.2
+          },
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        },
+        {
+          "round": 1,
+          "candidate": 2,
+          "label": "round01_c02",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_c02_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "Current-best anchored strategy. Start from the v35 50.5 R@1 setup and only explore small positive-gain perturbations around it.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025"
+            ],
+            "candidates_per_round": 4,
+            "max_train_queries": 500,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 10,
+            "teacher_max_gt_rank": 12,
+            "teacher_max_uncertainty": 0.995,
+            "teacher_min_margin": 0.003,
+            "acceptance_max_teacher_rank": 12,
+            "acceptance_max_uncertainty": 0.995,
+            "memory_refresh_topk": 300,
+            "memory_augmented_weight": 0.07200000000000001,
+            "alignment_teacher_weight": 0.08800000000000001,
+            "multiview_weight": 0.08,
+            "component_alignment_weight": 0.0,
+            "teacher_pairwise_weight": 0.075,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.1,
+            "video_aggregation_weight": 0.2
+          },
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        },
+        {
+          "round": 1,
+          "candidate": 3,
+          "label": "round01_c03",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_c03_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "Current-best anchored strategy. Start from the v35 50.5 R@1 setup and only explore small positive-gain perturbations around it.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025"
+            ],
+            "candidates_per_round": 4,
+            "max_train_queries": 500,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 10,
+            "teacher_max_gt_rank": 12,
+            "teacher_max_uncertainty": 0.9979849999999999,
+            "teacher_min_margin": 0.00255,
+            "acceptance_max_teacher_rank": 12,
+            "acceptance_max_uncertainty": 0.9979849999999999,
+            "memory_refresh_topk": 375,
+            "memory_augmented_weight": 0.1,
+            "alignment_teacher_weight": 0.08,
+            "multiview_weight": 0.08,
+            "component_alignment_weight": 0.0,
+            "teacher_pairwise_weight": 0.06,
+            "cross_modal_video_weight": 0.1,
+            "structured_prototype_weight": 0.1,
+            "video_aggregation_weight": 0.2
+          },
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        },
+        {
+          "round": 1,
+          "candidate": 4,
+          "label": "round01_c04",
+          "summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_c04_summary.json",
+          "return_code": 0,
+          "strategy_config": {
+            "description": "Current-best anchored strategy. Start from the v35 50.5 R@1 setup and only explore small positive-gain perturbations around it.",
+            "papers": [
+              "DiscoVLA CVPR 2025",
+              "TokenBinder WACV 2025"
+            ],
+            "candidates_per_round": 4,
+            "max_train_queries": 500,
+            "max_eval_queries": 200,
+            "epochs": 1,
+            "teacher_listwise_topk": 10,
+            "teacher_max_gt_rank": 12,
+            "teacher_max_uncertainty": 0.995,
+            "teacher_min_margin": 0.003,
+            "acceptance_max_teacher_rank": 12,
+            "acceptance_max_uncertainty": 0.995,
+            "memory_refresh_topk": 300,
+            "memory_augmented_weight": 0.08,
+            "alignment_teacher_weight": 0.07200000000000001,
+            "multiview_weight": 0.096,
+            "component_alignment_weight": 0.0,
+            "teacher_pairwise_weight": 0.066,
+            "cross_modal_video_weight": 0.08000000000000002,
+            "structured_prototype_weight": 0.1,
+            "video_aggregation_weight": 0.2
+          },
+          "quality": {
+            "quality_score": 0.0,
+            "quality_accepted": false,
+            "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+            "delta_vs_run_baseline": {},
+            "delta_vs_active_best": {}
+          }
+        }
+      ],
+      "quality": {
+        "quality_score": 0.0,
+        "quality_accepted": false,
+        "reason": "R@1 gain vs active best is below min_quality_r1_gain=0.01.",
+        "delta_vs_run_baseline": {},
+        "delta_vs_active_best": {}
+      },
+      "accepted": false,
+      "promoted": false,
+      "promotion": {
+        "promoted": false,
+        "reason": "Dry run."
+      },
+      "state": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\round01_continual_state.json",
+      "reason": "Rejected by quality gate: R@1 gain vs active best is below min_quality_r1_gain=0.01."
+    }
+  ],
+  "quality_success_rate": 0.0,
+  "promotion_success_rate": 0.0,
+  "target_success_rate": 0.8,
+  "target_met": false,
+  "diagnosis_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_215910_v35_plus_1kA\\diagnosis.json"
+}

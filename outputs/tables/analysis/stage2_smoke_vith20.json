@@ -1,0 +1,189 @@
+{
+  "stage_label": "stage2_smoke",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "queries": "msrvtt_1kA_test_queries.jsonl",
+  "manifest": "msrvtt_fixed_1kA.jsonl",
+  "folds": [
+    {
+      "fold": 1,
+      "train_stats": {
+        "train_loss": 1.596312,
+        "epochs": 1,
+        "train_queries": 10
+      },
+      "baseline": {
+        "N": 10,
+        "R@1": 50.0,
+        "R@5": 70.0,
+        "R@10": 70.0,
+        "MnR": 8.2,
+        "MedR": 1.5,
+        "ranks": [
+          15,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          1,
+          34,
+          23
+        ]
+      },
+      "adapter": {
+        "N": 10,
+        "R@1": 50.0,
+        "R@5": 90.0,
+        "R@10": 100.0,
+        "MnR": 2.1,
+        "MedR": 1.5,
+        "ranks": [
+          6,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          4,
+          2
+        ]
+      },
+      "fused": {
+        "adapter_hardneg_proto_late_teacher_fused88": {
+          "R@1": 50.0,
+          "R@5": 72.4,
+          "R@10": 73.6,
+          "MnR": 7.468,
+          "alpha": 0.88
+        },
+        "adapter_hardneg_proto_late_teacher_fused90": {
+          "R@1": 50.0,
+          "R@5": 72.0,
+          "R@10": 73.0,
+          "MnR": 7.59,
+          "alpha": 0.9
+        },
+        "adapter_hardneg_proto_late_teacher_fused92": {
+          "R@1": 50.0,
+          "R@5": 71.6,
+          "R@10": 72.4,
+          "MnR": 7.712,
+          "alpha": 0.92
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "train_stats": {
+        "train_loss": 1.594351,
+        "epochs": 1,
+        "train_queries": 10
+      },
+      "baseline": {
+        "N": 10,
+        "R@1": 60.0,
+        "R@5": 80.0,
+        "R@10": 80.0,
+        "MnR": 10.6,
+        "MedR": 1.0,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          70,
+          5,
+          23
+        ]
+      },
+      "adapter": {
+        "N": 10,
+        "R@1": 90.0,
+        "R@5": 90.0,
+        "R@10": 100.0,
+        "MnR": 1.5,
+        "MedR": 1.0,
+        "ranks": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          6,
+          1,
+          1
+        ]
+      },
+      "fused": {
+        "adapter_hardneg_proto_late_teacher_fused88": {
+          "R@1": 63.6,
+          "R@5": 81.2,
+          "R@10": 82.4,
+          "MnR": 9.508,
+          "alpha": 0.88
+        },
+        "adapter_hardneg_proto_late_teacher_fused90": {
+          "R@1": 63.0,
+          "R@5": 81.0,
+          "R@10": 82.0,
+          "MnR": 9.69,
+          "alpha": 0.9
+        },
+        "adapter_hardneg_proto_late_teacher_fused92": {
+          "R@1": 62.4,
+          "R@5": 80.8,
+          "R@10": 81.6,
+          "MnR": 9.872,
+          "alpha": 0.92
+        }
+      }
+    }
+  ],
+  "methods": {
+    "baseline": {
+      "N": 10,
+      "R@1": 55.0,
+      "R@5": 75.0,
+      "R@10": 75.0,
+      "MnR": 9.4
+    },
+    "adapter_hardneg_proto_late": {
+      "N": 10,
+      "R@1": 70.0,
+      "R@5": 90.0,
+      "R@10": 100.0,
+      "MnR": 1.8
+    },
+    "adapter_hardneg_proto_late_teacher_fused88": {
+      "N": 2,
+      "R@1": 56.8,
+      "R@5": 76.8,
+      "R@10": 78.0,
+      "MnR": 8.488
+    },
+    "adapter_hardneg_proto_late_teacher_fused90": {
+      "N": 2,
+      "R@1": 56.5,
+      "R@5": 76.5,
+      "R@10": 77.5,
+      "MnR": 8.64
+    },
+    "adapter_hardneg_proto_late_teacher_fused92": {
+      "N": 2,
+      "R@1": 56.2,
+      "R@5": 76.2,
+      "R@10": 77.0,
+      "MnR": 8.792
+    }
+  },
+  "time": "2026-03-23T15:10:13"
+}

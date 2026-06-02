@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage5_soft_querygate_errortype_component_rank2_10_q500_eval1kAfull_v1",
+  "time": "2026-05-04T18:43:53",
+  "metrics": {
+    "R@1": 39.0,
+    "R@5": 61.3,
+    "R@10": 72.3
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage5_soft_querygate_errortype_component_rank2_10_q500_eval1kAfull_v1.json"
+}

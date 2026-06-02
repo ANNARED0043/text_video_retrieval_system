@@ -1,0 +1,28 @@
+{
+  "video_id": "video8786",
+  "segment_id": "video8786_seg0000",
+  "llm_score": 20,
+  "reason": "The video shows an event with people and a crowd but lacks clear cartoon or announcement elements related to a fake show.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 237,
+    "output_tokens": 31,
+    "total_tokens": 268
+  },
+  "retrieval_rank": 5,
+  "retrieval_score": 0.27779167890548706,
+  "start_sec": 0.0,
+  "end_sec": 10.666666666666666,
+  "semantic_summary": "Two people stand in front of a colorful backdrop, and a crowd is seen raising hands at an event.",
+  "semantic_tags": [
+    "two people",
+    "colorful backdrop",
+    "sun illustration",
+    "crowd",
+    "raised hands",
+    "event",
+    "stage"
+  ]
+}

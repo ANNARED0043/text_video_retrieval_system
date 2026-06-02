@@ -1,0 +1,11 @@
+{
+  "stage_label": "continual_nearmiss_rank2_5_from_v35_pairwise_eval1kAq200_v1",
+  "time": "2026-05-03T18:20:37",
+  "metrics": {
+    "R@1": 48.5,
+    "R@5": 66.0,
+    "R@10": 73.5
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\continual_nearmiss_rank2_5_from_v35_pairwise_eval1kAq200_v1.json"
+}

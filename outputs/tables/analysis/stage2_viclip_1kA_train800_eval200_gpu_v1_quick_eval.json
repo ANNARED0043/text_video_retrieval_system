@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage2_viclip_1kA_train800_eval200_gpu_v1",
+  "time": "2026-04-10T17:03:22",
+  "metrics": {
+    "R@1": 47.5,
+    "R@5": 65.0,
+    "R@10": 72.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage2_viclip_1kA_train800_eval200_gpu_v1.json"
+}

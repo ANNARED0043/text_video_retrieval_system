@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage3_alignment_teacher_train_targets_1kA_f6_v3",
+  "time": "2026-04-23T16:05:03",
+  "metrics": {
+    "R@1": 49.5,
+    "R@5": 65.5,
+    "R@10": 73.5
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_teacher_train_targets_1kA_f6_v3.json"
+}

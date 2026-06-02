@@ -1,0 +1,138 @@
+{
+  "stage_label": "auto_hybrid_elite_round02_c01",
+  "time": "2026-04-23T21:49:57",
+  "train_manifest": "msrvtt_fixed.jsonl",
+  "train_queries": "msrvtt_train_9k_safe_train_queries.jsonl",
+  "eval_manifest": "msrvtt_fixed_safe_dev.jsonl",
+  "eval_queries": "msrvtt_train_9k_safe_dev_queries.jsonl",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "techniques": {
+    "hard_negative_mining": true,
+    "prototype_aware_learning": true,
+    "constraint_memory_sampling": true,
+    "teacher_soft_labels": true,
+    "late_interaction_bonus": true,
+    "teacher_mode": "external_teacher_supervision",
+    "target_main_teacher": "ViCLIP",
+    "residual_scale": 0.35,
+    "adapter_mode": "gated",
+    "selective_rank_min": 0,
+    "selective_rank_max": 0,
+    "teacher_listwise_topk": 12,
+    "sampler_mode": "memory",
+    "hard_negative_mode": "teacher_hybrid",
+    "teacher_temperature": 0.07,
+    "prototype_teacher_weight": 0.08,
+    "structured_prototype_weight": 0.11,
+    "video_aggregation_weight": 0.2,
+    "teacher_reliability_gating": true,
+    "teacher_max_gt_rank": 12,
+    "teacher_min_margin": 0.003,
+    "teacher_max_uncertainty": 0.992,
+    "memory_augmented_weight": 0.075,
+    "teacher_first_candidates": true,
+    "teacher_pairwise_weight": 0.065,
+    "cross_modal_video_weight": 0.1,
+    "alignment_teacher": "outputs/tables/analysis/multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+    "alignment_teacher_weight": 0.085,
+    "multiview_features": "outputs/tables/analysis/multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz",
+    "multiview_weight": 0.085,
+    "component_alignment_weight": 0.065,
+    "distill_candidate_topk": 24,
+    "false_negative_margin": 0.02,
+    "uncertainty_aware_temperature": true,
+    "teacher_temperature_min": 0.05,
+    "teacher_temperature_max": 0.11,
+    "stage_key": "stage3",
+    "acceptance_gated_memory": true,
+    "acceptance_max_teacher_rank": 12,
+    "acceptance_max_uncertainty": 0.992,
+    "acceptance_min_overlap": 0.0,
+    "acceptance_alignment_weight": 1.0,
+    "memory_refresh_topk": 360,
+    "acceptance_use_as_filter": true
+  },
+  "train_stats": {
+    "train_loss": 2.498475,
+    "epochs": 1,
+    "train_queries": 1000
+  },
+  "train_rows_used": 1000,
+  "train_rows_before_filter": 1000,
+  "eval_rows_used": 200,
+  "memory_stats": {
+    "candidates": 1000,
+    "accepted": 0,
+    "acceptance_rate": 0.0,
+    "memory_topk": 360,
+    "accepted_gt_rank_mean": null,
+    "accepted_top1_is_gt": 0,
+    "accepted_top1_is_gt_rate": null,
+    "accepted_uncertainty_mean": null,
+    "accepted_prototype_overlap_mean": null,
+    "accepted_alignment_overlap_mean": null
+  },
+  "memory_filter_stats": {
+    "accepted_before_rank_filter": 0,
+    "accepted_after_rank_filter": 0,
+    "train_rows_used": 1000
+  },
+  "methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 39.5,
+      "R@5": 59.0,
+      "R@10": 71.0,
+      "MnR": 45.515,
+      "MedR": 3.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 41.5,
+      "R@5": 63.5,
+      "R@10": 72.5,
+      "MnR": 34.2,
+      "MedR": 2.0
+    },
+    "fused88": {
+      "alpha": 0.88,
+      "R@1": 39.74,
+      "R@5": 59.54,
+      "R@10": 71.18,
+      "MnR": 44.1572
+    },
+    "fused90": {
+      "alpha": 0.9,
+      "R@1": 39.7,
+      "R@5": 59.45,
+      "R@10": 71.15,
+      "MnR": 44.3835
+    },
+    "fused92": {
+      "alpha": 0.92,
+      "R@1": 39.66,
+      "R@5": 59.36,
+      "R@10": 71.12,
+      "MnR": 44.6098
+    }
+  },
+  "best_method": "adapter",
+  "best_metrics": {
+    "N": 200,
+    "R@1": 41.5,
+    "R@5": 63.5,
+    "R@10": 72.5,
+    "MnR": 34.2,
+    "MedR": 2.0
+  },
+  "artifacts": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_214328_hybrid_elite_safe_dev\\round02_c01_summary.json",
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_214328_hybrid_elite_safe_dev\\round02_c01_summary.pt",
+    "quick_eval_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_214328_hybrid_elite_safe_dev\\round02_c01_summary_quick_eval.json",
+    "semantic_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\semantic_memory.json",
+    "alignment_teacher": "outputs/tables/analysis/multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+    "multiview_features": "outputs/tables/analysis/multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz",
+    "stage3_memory_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260423_214328_hybrid_elite_safe_dev\\round02_c01_summary_memory.json"
+  }
+}

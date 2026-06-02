@@ -1,0 +1,19 @@
+{
+  "queries": 500,
+  "out_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage5_nearmiss_rank2_5_error_type_component_memory_q500_v1.jsonl",
+  "out_teacher": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage5_nearmiss_rank2_5_error_type_component_teacher_q500_v1.jsonl",
+  "search_topk": 30,
+  "teacher_topk": 20,
+  "checkpoint": "outputs\\tables\\analysis\\stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAfull_lowmem_v1.pt",
+  "failed_only": true,
+  "min_gt_rank": 1,
+  "max_gt_rank": 5,
+  "selected_rows": 118,
+  "top1_is_gt_rate": 0.324,
+  "gt_rank_mean": 181.954,
+  "gt_rank_median": 3.0,
+  "selected_gt_rank_mean": 2.898305,
+  "selected_gt_rank_median": 3.0,
+  "multiview_pooling": "attention",
+  "multiview_temperature": 0.07
+}

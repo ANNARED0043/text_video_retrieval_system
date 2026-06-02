@@ -1,0 +1,11 @@
+{
+  "stage_label": "auto_hybrid_elite_round02_c01",
+  "time": "2026-04-24T00:26:10",
+  "metrics": {
+    "R@1": 49.5,
+    "R@5": 65.0,
+    "R@10": 74.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round02_c01_summary.json"
+}

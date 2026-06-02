@@ -1,0 +1,39 @@
+{
+  "mode": "rewrite_rerank_fused_semantic",
+  "rewrite_mode": "rewrite_selective",
+  "manifest": "msrvtt_fixed_1kA.jsonl",
+  "queries": "msrvtt_1kA_test_queries.jsonl",
+  "pooling": "mean",
+  "model_name": "ViT-H-14",
+  "pretrained": "laion2b_s32b_b79k",
+  "topk_segments": 200,
+  "rerank_topn": 5,
+  "ambiguity_threshold": 0.2,
+  "alpha": 0.8,
+  "rerank_only_if_rewritten": false,
+  "N": 200,
+  "metrics": {
+    "R@1": 48.0,
+    "R@5": 65.0,
+    "R@10": 72.5,
+    "MedR": 2.0,
+    "MnR": 16.8
+  },
+  "rewrite_count": 50,
+  "rewrite_rate": 0.25,
+  "rewrite_cache_hit_count": 50,
+  "candidate_semantics_cache_hit_count": 939,
+  "rerank_cache_hit_count": 687,
+  "token_usage": {
+    "input_tokens": 671850,
+    "output_tokens": 71326,
+    "total_tokens": 743176
+  },
+  "latency": {
+    "avg_search_ms": 84.944,
+    "avg_candidate_semantics_ms": 724.241,
+    "avg_rerank_ms": 3076.87,
+    "avg_total_ms": 3886.055
+  },
+  "log_path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\week7_rewrite_selective_mean_topk200_rerank5_alpha0.8_thr0.2.jsonl"
+}

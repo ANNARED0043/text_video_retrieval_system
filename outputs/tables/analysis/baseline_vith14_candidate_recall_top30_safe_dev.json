@@ -1,0 +1,15 @@
+{
+  "time": "2026-04-09T14:47:57",
+  "dataset": "MSR-VTT",
+  "protocol": "msrvtt_fixed_safe_dev",
+  "model_name": "ViT-H-14",
+  "pretrained": "laion2b_s32b_b79k",
+  "candidate_topk": 30,
+  "queries": 5000,
+  "candidate_recall": {
+    "R@1": 40.38,
+    "R@5": 62.82,
+    "R@10": 72.3,
+    "R@30": 83.54
+  }
+}

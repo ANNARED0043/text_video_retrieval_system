@@ -1,0 +1,25 @@
+{
+  "video_id": "video8673",
+  "segment_id": "video8673_seg0000",
+  "llm_score": 10,
+  "reason": "The video shows a discussion about SpongeBob characters, not a cartoon announcing a fake show's next event.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 237,
+    "output_tokens": 28,
+    "total_tokens": 265
+  },
+  "retrieval_rank": 4,
+  "retrieval_score": 0.28235742449760437,
+  "start_sec": 0.0,
+  "end_sec": 22.666666666666668,
+  "semantic_summary": "A man discusses SpongeBob and friends being mutants with images of the characters shown beside him.",
+  "semantic_tags": [
+    "man speaking",
+    "SpongeBob characters",
+    "animated characters",
+    "text \"#7 SpongeBob & Friends are Mutants\""
+  ]
+}

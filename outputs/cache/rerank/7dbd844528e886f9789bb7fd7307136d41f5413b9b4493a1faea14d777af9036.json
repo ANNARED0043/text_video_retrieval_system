@@ -1,0 +1,27 @@
+{
+  "video_id": "video9347",
+  "segment_id": "video9347_seg0000",
+  "llm_score": 30,
+  "reason": "The video shows a woman and a small dog but does not clearly depict cuddling or cooing.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 250,
+    "output_tokens": 29,
+    "total_tokens": 279
+  },
+  "retrieval_rank": 2,
+  "retrieval_score": 0.22554346919059753,
+  "start_sec": 0.0,
+  "end_sec": 13.666666666666666,
+  "semantic_summary": "A woman shows a leopard-print pet bed and a small dog is seen sitting on a chair.",
+  "semantic_tags": [
+    "woman",
+    "small dog",
+    "chair",
+    "leopard-print pet bed",
+    "indoor",
+    "living room"
+  ]
+}

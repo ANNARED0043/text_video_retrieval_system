@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="figure3-2" name="图3-2 细粒度对齐教师与多视角特征训练流程">
+    <mxGraphModel dx="1327" dy="807" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="query" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;" value="训练查询&#xa;文本描述" vertex="1">
+          <mxGeometry height="64" width="130" x="80" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="component" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F9FAFB;strokeColor=#4B5563;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;" value="语义成分解析&#xa;动作 / 对象 / 场景 / 关系 / 属性" vertex="1">
+          <mxGeometry height="78" width="270" x="250" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="video" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;" value="候选视频片段" vertex="1">
+          <mxGeometry height="64" width="130" x="80" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="views" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontFamily=SimSun;fontSize=15;" value="多视角视频表示&#xa;全局帧均值 / 局部片段 / 多时间窗" vertex="1">
+          <mxGeometry height="88" width="270" x="250" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2.4;fontFamily=SimSun;fontSize=15;fontStyle=1;" value="Alignment Teacher&#xa;局部语义对齐分数&#xa;教师软标签与排序偏好" vertex="1">
+          <mxGeometry height="104" width="230" x="610" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="student" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#009900;strokeWidth=2.4;fontFamily=SimSun;fontSize=15;fontStyle=1;" value="学生检索模型&#xa;残差适配器 / 表征校准" vertex="1">
+          <mxGeometry height="92" width="210" x="930" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="loss" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F8FAFC;strokeColor=#374151;strokeWidth=1.8;fontFamily=SimSun;fontSize=15;" value="联合训练目标&#xa;检索排序损失 + 教师蒸馏损失&#xa;+ 局部对齐损失 + 表征保持损失" vertex="1">
+          <mxGeometry height="105" width="280" x="610" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#374151;strokeWidth=1.6;fontFamily=SimSun;fontSize=15;" value="候选内部排序校准&#xa;提升目标视频 Top-1 稳定性" vertex="1">
+          <mxGeometry height="82" width="220" x="970" y="431.5" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="query" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="video" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="views">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="component" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#00CC00;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;" target="teacher" value="文本局部约束">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="views" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#66CC00;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;" target="teacher" value="视频局部证据">
+          <mxGeometry relative="1" x="0.0065" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="teacher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#1D4ED8;strokeWidth=2;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#1D4ED8;" target="student" value="监督信号">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="student" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="loss">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="380" />
+              <mxPoint x="750" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="loss" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#4B5563;strokeWidth=1.6;endArrow=block;endFill=1;" target="eval">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="loss" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#6B7280;strokeWidth=1.4;dashed=1;endArrow=block;endFill=1;fontFamily=SimSun;fontSize=12;fontColor=#4B5563;curved=1;" target="student" value="反向更新">
+          <mxGeometry relative="1" x="0.3823" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="750" y="580" />
+              <mxPoint x="1280" y="580" />
+              <mxPoint x="1280" y="256" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

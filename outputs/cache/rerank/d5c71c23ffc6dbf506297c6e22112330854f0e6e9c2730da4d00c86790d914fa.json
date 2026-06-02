@@ -1,0 +1,32 @@
+{
+  "video_id": "video7741",
+  "segment_id": "video7741_seg0000",
+  "llm_score": 30,
+  "reason": "The scene shows a broadcast setting but lacks clear cartoon or announcement elements related to a fake show event.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 253,
+    "output_tokens": 28,
+    "total_tokens": 281
+  },
+  "retrieval_rank": 2,
+  "retrieval_score": 0.2888655960559845,
+  "start_sec": 0.0,
+  "end_sec": 24.666666666666668,
+  "semantic_summary": "Characters are shown indoors, a man in a racing suit holds a photo in front of a crowd, and three commentators are seated at a broadcast desk.",
+  "semantic_tags": [
+    "indoor",
+    "living room",
+    "window",
+    "mountain",
+    "man",
+    "racing suit",
+    "photo",
+    "crowd",
+    "commentators",
+    "broadcast desk",
+    "headphones"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "queries": 500,
+  "out_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\xcot_style_pairwise_feedback_memory_q500_v1.jsonl",
+  "out_teacher": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\xcot_style_pairwise_feedback_teacher_q500_v1.jsonl",
+  "search_topk": 30,
+  "teacher_topk": 20,
+  "checkpoint": "outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+  "failed_only": true,
+  "min_gt_rank": 1,
+  "max_gt_rank": 30,
+  "selected_rows": 200,
+  "top1_is_gt_rate": 0.286,
+  "gt_rank_mean": 228.078,
+  "gt_rank_median": 6.0,
+  "selected_gt_rank_mean": 7.98,
+  "selected_gt_rank_median": 5.0,
+  "multiview_pooling": "attention",
+  "multiview_temperature": 0.07
+}

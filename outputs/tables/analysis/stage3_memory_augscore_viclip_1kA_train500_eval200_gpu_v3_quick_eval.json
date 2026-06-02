@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage3_memory_augscore_viclip_1kA_train500_eval200_gpu_v3",
+  "time": "2026-04-11T00:41:48",
+  "metrics": {
+    "R@1": 48.0,
+    "R@5": 65.5,
+    "R@10": 73.0
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_augscore_viclip_1kA_train500_eval200_gpu_v3.json"
+}

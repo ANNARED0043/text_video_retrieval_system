@@ -1,0 +1,181 @@
+{
+  "stage_label": "stage3_highquality_selected_componentview_vtokens6_align_multiview_pairwise_queryaware_q1500_eval1kAq200_v1",
+  "time": "2026-05-01T22:12:50",
+  "train_manifest": "msrvtt_fixed.jsonl",
+  "train_queries": "msrvtt_train_9k_safe_train_queries.jsonl",
+  "eval_manifest": "msrvtt_fixed_1kA.jsonl",
+  "eval_queries": "msrvtt_1kA_test_queries.jsonl",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "techniques": {
+    "hard_negative_mining": true,
+    "prototype_aware_learning": true,
+    "constraint_memory_sampling": true,
+    "teacher_soft_labels": true,
+    "late_interaction_bonus": true,
+    "teacher_mode": "external_teacher_supervision",
+    "target_main_teacher": "ViCLIP",
+    "residual_scale": 0.35,
+    "adapter_mode": "gated",
+    "selective_rank_min": 0,
+    "selective_rank_max": 0,
+    "teacher_listwise_topk": 5,
+    "sampler_mode": "none",
+    "hard_negative_mode": "teacher_hybrid",
+    "teacher_temperature": 0.07,
+    "prototype_teacher_weight": 0.08,
+    "structured_prototype_weight": 0.1,
+    "video_aggregation_weight": 0.2,
+    "teacher_reliability_gating": true,
+    "teacher_max_gt_rank": 20,
+    "teacher_min_margin": 0.003,
+    "teacher_max_uncertainty": 0.995,
+    "memory_augmented_weight": 0.08,
+    "teacher_first_candidates": true,
+    "teacher_pairwise_weight": 0.1,
+    "cross_modal_video_weight": 0.1,
+    "alignment_teacher": "outputs\\tables\\analysis\\alignment_teacher_highquality_selected_from_q1500_f6_v1.jsonl",
+    "alignment_teacher_weight": 0.1,
+    "multiview_features": "outputs\\tables\\analysis\\multiview_features_highquality_selected_from_q1500_vtokens6_fpv2_v1.npz",
+    "multiview_weight": 0.1,
+    "component_alignment_weight": 0.08,
+    "query_aware_fusion": true,
+    "component_view_weight": 0.08,
+    "distill_candidate_topk": 24,
+    "false_negative_margin": 0.05,
+    "uncertainty_aware_temperature": false,
+    "teacher_temperature_min": 0.05,
+    "teacher_temperature_max": 0.11,
+    "stage_key": "stage3",
+    "acceptance_gated_memory": true,
+    "acceptance_max_teacher_rank": 20,
+    "acceptance_max_uncertainty": 0.995,
+    "acceptance_min_overlap": 0.0,
+    "acceptance_alignment_weight": 1.0,
+    "memory_refresh_topk": 500,
+    "acceptance_use_as_filter": true,
+    "warm_start_checkpoint": false
+  },
+  "train_stats": {
+    "train_loss": 3.141015,
+    "epochs": 1,
+    "train_queries": 500
+  },
+  "train_rows_used": 500,
+  "train_rows_before_filter": 1500,
+  "eval_rows_used": 200,
+  "memory_stats": {
+    "candidates": 1500,
+    "accepted": 500,
+    "acceptance_rate": 0.333333,
+    "memory_topk": 500,
+    "accepted_gt_rank_mean": 1.822,
+    "accepted_top1_is_gt": 282,
+    "accepted_top1_is_gt_rate": 0.564,
+    "accepted_uncertainty_mean": 0.955659,
+    "accepted_prototype_overlap_mean": 1.0,
+    "accepted_alignment_overlap_mean": 0.107402
+  },
+  "memory_filter_stats": {
+    "accepted_before_rank_filter": 500,
+    "accepted_after_rank_filter": 500,
+    "train_rows_used": 500
+  },
+  "methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 49.0,
+      "R@5": 63.5,
+      "R@10": 72.5,
+      "MnR": 21.3,
+      "MedR": 2.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 48.5,
+      "R@5": 66.0,
+      "R@10": 74.5,
+      "MnR": 20.26,
+      "MedR": 2.0
+    },
+    "fused88": {
+      "alpha": 0.88,
+      "R@1": 48.94,
+      "R@5": 63.8,
+      "R@10": 72.74,
+      "MnR": 21.1752
+    },
+    "fused90": {
+      "alpha": 0.9,
+      "R@1": 48.95,
+      "R@5": 63.75,
+      "R@10": 72.7,
+      "MnR": 21.196
+    },
+    "fused92": {
+      "alpha": 0.92,
+      "R@1": 48.96,
+      "R@5": 63.7,
+      "R@10": 72.66,
+      "MnR": 21.2168
+    }
+  },
+  "augmented_methods": {
+    "baseline": {
+      "N": 200,
+      "R@1": 49.0,
+      "R@5": 63.5,
+      "R@10": 72.5,
+      "MnR": 21.3,
+      "MedR": 2.0
+    },
+    "adapter": {
+      "N": 200,
+      "R@1": 48.5,
+      "R@5": 66.0,
+      "R@10": 74.5,
+      "MnR": 20.26,
+      "MedR": 2.0
+    },
+    "fused88": {
+      "alpha": 0.88,
+      "R@1": 48.94,
+      "R@5": 63.8,
+      "R@10": 72.74,
+      "MnR": 21.1752
+    },
+    "fused90": {
+      "alpha": 0.9,
+      "R@1": 48.95,
+      "R@5": 63.75,
+      "R@10": 72.7,
+      "MnR": 21.196
+    },
+    "fused92": {
+      "alpha": 0.92,
+      "R@1": 48.96,
+      "R@5": 63.7,
+      "R@10": 72.66,
+      "MnR": 21.2168
+    }
+  },
+  "best_method": "baseline",
+  "best_metrics": {
+    "N": 200,
+    "R@1": 49.0,
+    "R@5": 63.5,
+    "R@10": 72.5,
+    "MnR": 21.3,
+    "MedR": 2.0
+  },
+  "artifacts": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_highquality_selected_componentview_vtokens6_align_multiview_pairwise_queryaware_q1500_eval1kAq200_v1.json",
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_highquality_selected_componentview_vtokens6_align_multiview_pairwise_queryaware_q1500_eval1kAq200_v1.pt",
+    "quick_eval_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_highquality_selected_componentview_vtokens6_align_multiview_pairwise_queryaware_q1500_eval1kAq200_v1_quick_eval.json",
+    "semantic_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\semantic_memory.json",
+    "alignment_teacher": "outputs\\tables\\analysis\\alignment_teacher_highquality_selected_from_q1500_f6_v1.jsonl",
+    "multiview_features": "outputs\\tables\\analysis\\multiview_features_highquality_selected_from_q1500_vtokens6_fpv2_v1.npz",
+    "init_checkpoint": "",
+    "stage3_memory_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_highquality_selected_componentview_vtokens6_align_multiview_pairwise_queryaware_q1500_eval1kAq200_v1_memory.json"
+  }
+}

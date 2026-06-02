@@ -1,0 +1,28 @@
+{
+  "video_id": "video9200",
+  "segment_id": "video9200_seg0000",
+  "llm_score": 20,
+  "reason": "The video shows dogs but lacks a woman in a black hoodie cuddling a brown, black, and white puppy.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 248,
+    "output_tokens": 31,
+    "total_tokens": 279
+  },
+  "retrieval_rank": 4,
+  "retrieval_score": 0.19940096139907837,
+  "start_sec": 0.0,
+  "end_sec": 18.666666666666668,
+  "semantic_summary": "Horses and dogs interact in a video game environment near a pond and a house.",
+  "semantic_tags": [
+    "horses",
+    "dogs",
+    "pond",
+    "house",
+    "video game interface",
+    "outdoor scene",
+    "night scene"
+  ]
+}

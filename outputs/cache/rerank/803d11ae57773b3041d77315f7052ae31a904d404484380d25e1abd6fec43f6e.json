@@ -1,0 +1,29 @@
+{
+  "video_id": "video7835",
+  "segment_id": "video7835_seg0000",
+  "llm_score": 20,
+  "reason": "The video shows cartoon characters but does not clearly depict an announcement of the next event in a fake show.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 245,
+    "output_tokens": 29,
+    "total_tokens": 274
+  },
+  "retrieval_rank": 3,
+  "retrieval_score": 0.2868092656135559,
+  "start_sec": 0.0,
+  "end_sec": 19.666666666666668,
+  "semantic_summary": "SpongeBob and Patrick are excited, and a fish character is holding a claw in front of a Krabby Patty stand.",
+  "semantic_tags": [
+    "SpongeBob",
+    "Patrick",
+    "fish character",
+    "claw",
+    "Krabby Patty signs",
+    "underwater",
+    "animated characters",
+    "colorful background"
+  ]
+}

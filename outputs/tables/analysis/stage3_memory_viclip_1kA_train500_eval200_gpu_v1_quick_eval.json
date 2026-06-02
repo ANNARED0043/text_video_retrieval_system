@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage3_memory_viclip_1kA_train500_eval200_gpu_v1",
+  "time": "2026-04-11T00:20:55",
+  "metrics": {
+    "R@1": 47.5,
+    "R@5": 65.0,
+    "R@10": 72.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_memory_viclip_1kA_train500_eval200_gpu_v1.json"
+}

@@ -1,0 +1,20 @@
+{
+  "video_id": "video9200",
+  "segment_id": "video9200_seg0000",
+  "summary": "Horses and dogs interact in a video game environment near a pond and a house.",
+  "tags": [
+    "horses",
+    "dogs",
+    "pond",
+    "house",
+    "video game interface",
+    "outdoor scene",
+    "night scene"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 38,
+    "total_tokens": 466
+  }
+}

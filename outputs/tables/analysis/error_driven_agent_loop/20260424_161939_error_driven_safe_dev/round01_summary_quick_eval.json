@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage3_error_driven_round01",
+  "time": "2026-04-24T16:21:36",
+  "metrics": {
+    "R@1": 40.5,
+    "R@5": 62.5,
+    "R@10": 72.0
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_161939_error_driven_safe_dev\\round01_summary.json"
+}

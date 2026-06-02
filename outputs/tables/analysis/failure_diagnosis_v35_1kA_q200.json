@@ -1,0 +1,1970 @@
+{
+  "schema_version": "retrieval_failure_diagnosis_v1",
+  "manifest": "msrvtt_fixed_1kA.jsonl",
+  "queries": "msrvtt_1kA_test_queries.jsonl",
+  "checkpoint": "outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+  "max_queries": 200,
+  "rank_buckets": {
+    "top11_30": 31,
+    "top1": 99,
+    "top2_5": 33,
+    "gt_outside_top30": 22,
+    "top6_10": 15
+  },
+  "failure_tag_counts": {
+    "object": 72,
+    "relation": 67,
+    "person_attribute": 53,
+    "action": 43,
+    "scene": 14,
+    "other": 12,
+    "multi_action": 7,
+    "temporal_order": 3
+  },
+  "success_tag_counts": {
+    "object": 66,
+    "relation": 47,
+    "action": 35,
+    "person_attribute": 34,
+    "scene": 17,
+    "other": 13,
+    "multi_action": 6,
+    "temporal_order": 3
+  },
+  "failure_cases_top50": [
+    {
+      "qid": 191,
+      "query": "some one showing the video of best moment of the match",
+      "gt_video_id": "video7150",
+      "gt_rank": 570,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9817",
+          "score": 0.408955
+        },
+        {
+          "rank": 2,
+          "video_id": "video9305",
+          "score": 0.398403
+        },
+        {
+          "rank": 3,
+          "video_id": "video7358",
+          "score": 0.391177
+        },
+        {
+          "rank": 4,
+          "video_id": "video8913",
+          "score": 0.383857
+        },
+        {
+          "rank": 5,
+          "video_id": "video8979",
+          "score": 0.382072
+        }
+      ]
+    },
+    {
+      "qid": 48,
+      "query": "there are some different colors light spreading inside a studio ",
+      "gt_video_id": "video7035",
+      "gt_rank": 425,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "scene"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9812",
+          "score": 0.26746
+        },
+        {
+          "rank": 2,
+          "video_id": "video7231",
+          "score": 0.26043
+        },
+        {
+          "rank": 3,
+          "video_id": "video7575",
+          "score": 0.259782
+        },
+        {
+          "rank": 4,
+          "video_id": "video8669",
+          "score": 0.257771
+        },
+        {
+          "rank": 5,
+          "video_id": "video7546",
+          "score": 0.253143
+        }
+      ]
+    },
+    {
+      "qid": 52,
+      "query": "a man is puting off the fire",
+      "gt_video_id": "video7060",
+      "gt_rank": 343,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9694",
+          "score": 0.322859
+        },
+        {
+          "rank": 2,
+          "video_id": "video7147",
+          "score": 0.320443
+        },
+        {
+          "rank": 3,
+          "video_id": "video9333",
+          "score": 0.30644
+        },
+        {
+          "rank": 4,
+          "video_id": "video9255",
+          "score": 0.299236
+        },
+        {
+          "rank": 5,
+          "video_id": "video8078",
+          "score": 0.297127
+        }
+      ]
+    },
+    {
+      "qid": 53,
+      "query": "a person is explaining something",
+      "gt_video_id": "video7060",
+      "gt_rank": 329,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9242",
+          "score": 0.379211
+        },
+        {
+          "rank": 2,
+          "video_id": "video7418",
+          "score": 0.361971
+        },
+        {
+          "rank": 3,
+          "video_id": "video9825",
+          "score": 0.352798
+        },
+        {
+          "rank": 4,
+          "video_id": "video9203",
+          "score": 0.34572
+        },
+        {
+          "rank": 5,
+          "video_id": "video7680",
+          "score": 0.34199
+        }
+      ]
+    },
+    {
+      "qid": 27,
+      "query": "a man is discussing how the program is loading up and if there are any problems or questions to message him",
+      "gt_video_id": "video7027",
+      "gt_rank": 211,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8072",
+          "score": 0.313755
+        },
+        {
+          "rank": 2,
+          "video_id": "video7418",
+          "score": 0.306618
+        },
+        {
+          "rank": 3,
+          "video_id": "video8331",
+          "score": 0.300867
+        },
+        {
+          "rank": 4,
+          "video_id": "video8301",
+          "score": 0.298855
+        },
+        {
+          "rank": 5,
+          "video_id": "video9242",
+          "score": 0.289335
+        }
+      ]
+    },
+    {
+      "qid": 186,
+      "query": "a few brief clips of a woman showing plot points for a show",
+      "gt_video_id": "video7149",
+      "gt_rank": 197,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "multi_action",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8254",
+          "score": 0.436014
+        },
+        {
+          "rank": 2,
+          "video_id": "video7829",
+          "score": 0.421829
+        },
+        {
+          "rank": 3,
+          "video_id": "video7724",
+          "score": 0.393991
+        },
+        {
+          "rank": 4,
+          "video_id": "video9322",
+          "score": 0.36293
+        },
+        {
+          "rank": 5,
+          "video_id": "video8011",
+          "score": 0.360851
+        }
+      ]
+    },
+    {
+      "qid": 157,
+      "query": "a man is describing and playing a video game",
+      "gt_video_id": "video7143",
+      "gt_rank": 194,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8301",
+          "score": 0.380899
+        },
+        {
+          "rank": 2,
+          "video_id": "video8721",
+          "score": 0.35086
+        },
+        {
+          "rank": 3,
+          "video_id": "video9474",
+          "score": 0.349655
+        },
+        {
+          "rank": 4,
+          "video_id": "video8492",
+          "score": 0.346382
+        },
+        {
+          "rank": 5,
+          "video_id": "video7368",
+          "score": 0.340376
+        }
+      ]
+    },
+    {
+      "qid": 156,
+      "query": "a man describing a videogame",
+      "gt_video_id": "video7143",
+      "gt_rank": 170,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8301",
+          "score": 0.385023
+        },
+        {
+          "rank": 2,
+          "video_id": "video8721",
+          "score": 0.375822
+        },
+        {
+          "rank": 3,
+          "video_id": "video9474",
+          "score": 0.372624
+        },
+        {
+          "rank": 4,
+          "video_id": "video7946",
+          "score": 0.358978
+        },
+        {
+          "rank": 5,
+          "video_id": "video8492",
+          "score": 0.356286
+        }
+      ]
+    },
+    {
+      "qid": 26,
+      "query": "a screen with a man is sitting on a bench in a glimpse",
+      "gt_video_id": "video7027",
+      "gt_rank": 142,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7686",
+          "score": 0.373632
+        },
+        {
+          "rank": 2,
+          "video_id": "video9350",
+          "score": 0.357556
+        },
+        {
+          "rank": 3,
+          "video_id": "video9517",
+          "score": 0.343384
+        },
+        {
+          "rank": 4,
+          "video_id": "video7114",
+          "score": 0.338065
+        },
+        {
+          "rank": 5,
+          "video_id": "video7576",
+          "score": 0.305963
+        }
+      ]
+    },
+    {
+      "qid": 73,
+      "query": "a cartoon video for kids",
+      "gt_video_id": "video7111",
+      "gt_rank": 96,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "other"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9777",
+          "score": 0.45626
+        },
+        {
+          "rank": 2,
+          "video_id": "video7701",
+          "score": 0.403346
+        },
+        {
+          "rank": 3,
+          "video_id": "video8827",
+          "score": 0.357136
+        },
+        {
+          "rank": 4,
+          "video_id": "video8799",
+          "score": 0.355096
+        },
+        {
+          "rank": 5,
+          "video_id": "video8973",
+          "score": 0.342285
+        }
+      ]
+    },
+    {
+      "qid": 149,
+      "query": "there is a someone walking on the floor",
+      "gt_video_id": "video7141",
+      "gt_rank": 88,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9307",
+          "score": 0.403252
+        },
+        {
+          "rank": 2,
+          "video_id": "video9324",
+          "score": 0.356489
+        },
+        {
+          "rank": 3,
+          "video_id": "video8867",
+          "score": 0.349736
+        },
+        {
+          "rank": 4,
+          "video_id": "video7466",
+          "score": 0.323667
+        },
+        {
+          "rank": 5,
+          "video_id": "video7558",
+          "score": 0.322844
+        }
+      ]
+    },
+    {
+      "qid": 66,
+      "query": "there is a man  shooting  other people in a corridor",
+      "gt_video_id": "video7110",
+      "gt_rank": 80,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9324",
+          "score": 0.35981
+        },
+        {
+          "rank": 2,
+          "video_id": "video7114",
+          "score": 0.339869
+        },
+        {
+          "rank": 3,
+          "video_id": "video9238",
+          "score": 0.332842
+        },
+        {
+          "rank": 4,
+          "video_id": "video7757",
+          "score": 0.323846
+        },
+        {
+          "rank": 5,
+          "video_id": "video7766",
+          "score": 0.323101
+        }
+      ]
+    },
+    {
+      "qid": 46,
+      "query": "the lighting effects are very nice and the cartoon creatures moving nicely",
+      "gt_video_id": "video7035",
+      "gt_rank": 77,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "other"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7467",
+          "score": 0.37368
+        },
+        {
+          "rank": 2,
+          "video_id": "video9306",
+          "score": 0.362354
+        },
+        {
+          "rank": 3,
+          "video_id": "video8674",
+          "score": 0.356218
+        },
+        {
+          "rank": 4,
+          "video_id": "video8110",
+          "score": 0.349787
+        },
+        {
+          "rank": 5,
+          "video_id": "video9580",
+          "score": 0.348978
+        }
+      ]
+    },
+    {
+      "qid": 62,
+      "query": "the young man is explaining about the product on the table",
+      "gt_video_id": "video7064",
+      "gt_rank": 62,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7418",
+          "score": 0.328046
+        },
+        {
+          "rank": 2,
+          "video_id": "video8456",
+          "score": 0.325363
+        },
+        {
+          "rank": 3,
+          "video_id": "video7375",
+          "score": 0.32182
+        },
+        {
+          "rank": 4,
+          "video_id": "video9699",
+          "score": 0.320362
+        },
+        {
+          "rank": 5,
+          "video_id": "video8301",
+          "score": 0.315547
+        }
+      ]
+    },
+    {
+      "qid": 125,
+      "query": "a band is singing on a stage at a show",
+      "gt_video_id": "video7135",
+      "gt_rank": 61,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "scene",
+        "multi_action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7596",
+          "score": 0.396506
+        },
+        {
+          "rank": 2,
+          "video_id": "video8324",
+          "score": 0.359332
+        },
+        {
+          "rank": 3,
+          "video_id": "video8926",
+          "score": 0.337507
+        },
+        {
+          "rank": 4,
+          "video_id": "video8925",
+          "score": 0.337417
+        },
+        {
+          "rank": 5,
+          "video_id": "video8482",
+          "score": 0.328401
+        }
+      ]
+    },
+    {
+      "qid": 168,
+      "query": "a women is talking about the economy of france and about a man feeling the country s pain",
+      "gt_video_id": "video7145",
+      "gt_rank": 53,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9337",
+          "score": 0.337741
+        },
+        {
+          "rank": 2,
+          "video_id": "video8254",
+          "score": 0.321789
+        },
+        {
+          "rank": 3,
+          "video_id": "video7580",
+          "score": 0.315374
+        },
+        {
+          "rank": 4,
+          "video_id": "video9205",
+          "score": 0.307298
+        },
+        {
+          "rank": 5,
+          "video_id": "video7364",
+          "score": 0.306348
+        }
+      ]
+    },
+    {
+      "qid": 54,
+      "query": "a person sprayed fire extinguisher on a vehicle",
+      "gt_video_id": "video7060",
+      "gt_rank": 48,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7820",
+          "score": 0.271076
+        },
+        {
+          "rank": 2,
+          "video_id": "video9508",
+          "score": 0.269204
+        },
+        {
+          "rank": 3,
+          "video_id": "video9036",
+          "score": 0.264762
+        },
+        {
+          "rank": 4,
+          "video_id": "video8311",
+          "score": 0.259531
+        },
+        {
+          "rank": 5,
+          "video_id": "video7965",
+          "score": 0.259409
+        }
+      ]
+    },
+    {
+      "qid": 15,
+      "query": "a boy running is running without dress",
+      "gt_video_id": "video7025",
+      "gt_rank": 47,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "multi_action",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7915",
+          "score": 0.347857
+        },
+        {
+          "rank": 2,
+          "video_id": "video9240",
+          "score": 0.339263
+        },
+        {
+          "rank": 3,
+          "video_id": "video7155",
+          "score": 0.326535
+        },
+        {
+          "rank": 4,
+          "video_id": "video8507",
+          "score": 0.320888
+        },
+        {
+          "rank": 5,
+          "video_id": "video9326",
+          "score": 0.299046
+        }
+      ]
+    },
+    {
+      "qid": 51,
+      "query": "a man extinguishes a fire outside",
+      "gt_video_id": "video7060",
+      "gt_rank": 44,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8311",
+          "score": 0.22292
+        },
+        {
+          "rank": 2,
+          "video_id": "video9694",
+          "score": 0.211077
+        },
+        {
+          "rank": 3,
+          "video_id": "video7147",
+          "score": 0.209181
+        },
+        {
+          "rank": 4,
+          "video_id": "video9255",
+          "score": 0.209065
+        },
+        {
+          "rank": 5,
+          "video_id": "video8416",
+          "score": 0.20288
+        }
+      ]
+    },
+    {
+      "qid": 127,
+      "query": "group of mans perform band high sound in the private place",
+      "gt_video_id": "video7135",
+      "gt_rank": 41,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7725",
+          "score": 0.252426
+        },
+        {
+          "rank": 2,
+          "video_id": "video8466",
+          "score": 0.242026
+        },
+        {
+          "rank": 3,
+          "video_id": "video7227",
+          "score": 0.231949
+        },
+        {
+          "rank": 4,
+          "video_id": "video7772",
+          "score": 0.231772
+        },
+        {
+          "rank": 5,
+          "video_id": "video7969",
+          "score": 0.230508
+        }
+      ]
+    },
+    {
+      "qid": 158,
+      "query": "a man is explaining how to play a pc pokemon game",
+      "gt_video_id": "video7143",
+      "gt_rank": 35,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7203",
+          "score": 0.382662
+        },
+        {
+          "rank": 2,
+          "video_id": "video8301",
+          "score": 0.364146
+        },
+        {
+          "rank": 3,
+          "video_id": "video9510",
+          "score": 0.322445
+        },
+        {
+          "rank": 4,
+          "video_id": "video8673",
+          "score": 0.318768
+        },
+        {
+          "rank": 5,
+          "video_id": "video7593",
+          "score": 0.318429
+        }
+      ]
+    },
+    {
+      "qid": 150,
+      "query": "there is a woman in bridal dress standing on the floor",
+      "gt_video_id": "video7142",
+      "gt_rank": 34,
+      "bucket": "gt_outside_top30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "multi_action",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8342",
+          "score": 0.285817
+        },
+        {
+          "rank": 2,
+          "video_id": "video8923",
+          "score": 0.278954
+        },
+        {
+          "rank": 3,
+          "video_id": "video7573",
+          "score": 0.276918
+        },
+        {
+          "rank": 4,
+          "video_id": "video7116",
+          "score": 0.250584
+        },
+        {
+          "rank": 5,
+          "video_id": "video9322",
+          "score": 0.234632
+        }
+      ]
+    },
+    {
+      "qid": 108,
+      "query": "a girl is knocking on the wall",
+      "gt_video_id": "video7118",
+      "gt_rank": 30,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8011",
+          "score": 0.308719
+        },
+        {
+          "rank": 2,
+          "video_id": "video8825",
+          "score": 0.304489
+        },
+        {
+          "rank": 3,
+          "video_id": "video9324",
+          "score": 0.296524
+        },
+        {
+          "rank": 4,
+          "video_id": "video7782",
+          "score": 0.287797
+        },
+        {
+          "rank": 5,
+          "video_id": "video9816",
+          "score": 0.287171
+        }
+      ]
+    },
+    {
+      "qid": 142,
+      "query": "a person is making a dish",
+      "gt_video_id": "video7140",
+      "gt_rank": 30,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8300",
+          "score": 0.383412
+        },
+        {
+          "rank": 2,
+          "video_id": "video9684",
+          "score": 0.375646
+        },
+        {
+          "rank": 3,
+          "video_id": "video8915",
+          "score": 0.374883
+        },
+        {
+          "rank": 4,
+          "video_id": "video9693",
+          "score": 0.373598
+        },
+        {
+          "rank": 5,
+          "video_id": "video8514",
+          "score": 0.371047
+        }
+      ]
+    },
+    {
+      "qid": 167,
+      "query": "the lady tells that she can t see that the economy of francis can be rescued by raising 250 million dollars",
+      "gt_video_id": "video7145",
+      "gt_rank": 30,
+      "bucket": "top11_30",
+      "tags": [
+        "other"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8243",
+          "score": 0.315872
+        },
+        {
+          "rank": 2,
+          "video_id": "video8824",
+          "score": 0.296573
+        },
+        {
+          "rank": 3,
+          "video_id": "video8904",
+          "score": 0.295481
+        },
+        {
+          "rank": 4,
+          "video_id": "video9688",
+          "score": 0.294324
+        },
+        {
+          "rank": 5,
+          "video_id": "video8022",
+          "score": 0.291747
+        }
+      ]
+    },
+    {
+      "qid": 109,
+      "query": "a girl knocking on a wall",
+      "gt_video_id": "video7118",
+      "gt_rank": 29,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8507",
+          "score": 0.297006
+        },
+        {
+          "rank": 2,
+          "video_id": "video8011",
+          "score": 0.291277
+        },
+        {
+          "rank": 3,
+          "video_id": "video8825",
+          "score": 0.288916
+        },
+        {
+          "rank": 4,
+          "video_id": "video9324",
+          "score": 0.278727
+        },
+        {
+          "rank": 5,
+          "video_id": "video9878",
+          "score": 0.278539
+        }
+      ]
+    },
+    {
+      "qid": 18,
+      "query": "a naked child runs through a field",
+      "gt_video_id": "video7025",
+      "gt_rank": 25,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "scene",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8125",
+          "score": 0.284585
+        },
+        {
+          "rank": 2,
+          "video_id": "video9240",
+          "score": 0.280128
+        },
+        {
+          "rank": 3,
+          "video_id": "video8931",
+          "score": 0.259545
+        },
+        {
+          "rank": 4,
+          "video_id": "video8655",
+          "score": 0.251225
+        },
+        {
+          "rank": 5,
+          "video_id": "video9031",
+          "score": 0.2475
+        }
+      ]
+    },
+    {
+      "qid": 19,
+      "query": "a naked child runs through a field",
+      "gt_video_id": "video7025",
+      "gt_rank": 25,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "scene",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8125",
+          "score": 0.284585
+        },
+        {
+          "rank": 2,
+          "video_id": "video9240",
+          "score": 0.280128
+        },
+        {
+          "rank": 3,
+          "video_id": "video8931",
+          "score": 0.259545
+        },
+        {
+          "rank": 4,
+          "video_id": "video8655",
+          "score": 0.251225
+        },
+        {
+          "rank": 5,
+          "video_id": "video9031",
+          "score": 0.2475
+        }
+      ]
+    },
+    {
+      "qid": 40,
+      "query": "a boy is talking holds a boy toy by its leg and continues to talk",
+      "gt_video_id": "video7034",
+      "gt_rank": 25,
+      "bucket": "top11_30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8341",
+          "score": 0.313135
+        },
+        {
+          "rank": 2,
+          "video_id": "video9777",
+          "score": 0.305808
+        },
+        {
+          "rank": 3,
+          "video_id": "video7593",
+          "score": 0.303804
+        },
+        {
+          "rank": 4,
+          "video_id": "video9576",
+          "score": 0.302333
+        },
+        {
+          "rank": 5,
+          "video_id": "video9240",
+          "score": 0.298029
+        }
+      ]
+    },
+    {
+      "qid": 147,
+      "query": "a man in a red shirt and jeans is walking down a catwalk",
+      "gt_video_id": "video7141",
+      "gt_rank": 25,
+      "bucket": "top11_30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7730",
+          "score": 0.346926
+        },
+        {
+          "rank": 2,
+          "video_id": "video9308",
+          "score": 0.296243
+        },
+        {
+          "rank": 3,
+          "video_id": "video7669",
+          "score": 0.291835
+        },
+        {
+          "rank": 4,
+          "video_id": "video9802",
+          "score": 0.277326
+        },
+        {
+          "rank": 5,
+          "video_id": "video8342",
+          "score": 0.271748
+        }
+      ]
+    },
+    {
+      "qid": 139,
+      "query": "a man drives a car",
+      "gt_video_id": "video7138",
+      "gt_rank": 23,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9677",
+          "score": 0.399059
+        },
+        {
+          "rank": 2,
+          "video_id": "video9331",
+          "score": 0.398298
+        },
+        {
+          "rank": 3,
+          "video_id": "video7597",
+          "score": 0.367681
+        },
+        {
+          "rank": 4,
+          "video_id": "video7354",
+          "score": 0.357387
+        },
+        {
+          "rank": 5,
+          "video_id": "video8497",
+          "score": 0.352989
+        }
+      ]
+    },
+    {
+      "qid": 195,
+      "query": "a clip from a show about building and testing machinery",
+      "gt_video_id": "video7151",
+      "gt_rank": 23,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7343",
+          "score": 0.401023
+        },
+        {
+          "rank": 2,
+          "video_id": "video9508",
+          "score": 0.400167
+        },
+        {
+          "rank": 3,
+          "video_id": "video8804",
+          "score": 0.398958
+        },
+        {
+          "rank": 4,
+          "video_id": "video7110",
+          "score": 0.379137
+        },
+        {
+          "rank": 5,
+          "video_id": "video9530",
+          "score": 0.371167
+        }
+      ]
+    },
+    {
+      "qid": 16,
+      "query": "a child is running naked across the grass",
+      "gt_video_id": "video7025",
+      "gt_rank": 21,
+      "bucket": "top11_30",
+      "tags": [
+        "action",
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8507",
+          "score": 0.371415
+        },
+        {
+          "rank": 2,
+          "video_id": "video8125",
+          "score": 0.3471
+        },
+        {
+          "rank": 3,
+          "video_id": "video9240",
+          "score": 0.335549
+        },
+        {
+          "rank": 4,
+          "video_id": "video8016",
+          "score": 0.305936
+        },
+        {
+          "rank": 5,
+          "video_id": "video8044",
+          "score": 0.299496
+        }
+      ]
+    },
+    {
+      "qid": 0,
+      "query": "a person is preparing some art",
+      "gt_video_id": "video7020",
+      "gt_rank": 20,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7977",
+          "score": 0.339883
+        },
+        {
+          "rank": 2,
+          "video_id": "video9349",
+          "score": 0.323327
+        },
+        {
+          "rank": 3,
+          "video_id": "video8686",
+          "score": 0.287562
+        },
+        {
+          "rank": 4,
+          "video_id": "video8688",
+          "score": 0.285507
+        },
+        {
+          "rank": 5,
+          "video_id": "video8601",
+          "score": 0.28497
+        }
+      ]
+    },
+    {
+      "qid": 126,
+      "query": "a man in a music video screams shut up a bunch of times",
+      "gt_video_id": "video7135",
+      "gt_rank": 19,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8780",
+          "score": 0.417925
+        },
+        {
+          "rank": 2,
+          "video_id": "video7367",
+          "score": 0.395001
+        },
+        {
+          "rank": 3,
+          "video_id": "video7028",
+          "score": 0.378953
+        },
+        {
+          "rank": 4,
+          "video_id": "video7576",
+          "score": 0.378436
+        },
+        {
+          "rank": 5,
+          "video_id": "video7755",
+          "score": 0.377042
+        }
+      ]
+    },
+    {
+      "qid": 144,
+      "query": "a person is preparing a recipe",
+      "gt_video_id": "video7140",
+      "gt_rank": 19,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8915",
+          "score": 0.380953
+        },
+        {
+          "rank": 2,
+          "video_id": "video9356",
+          "score": 0.359419
+        },
+        {
+          "rank": 3,
+          "video_id": "video7966",
+          "score": 0.355198
+        },
+        {
+          "rank": 4,
+          "video_id": "video9693",
+          "score": 0.352486
+        },
+        {
+          "rank": 5,
+          "video_id": "video7695",
+          "score": 0.352218
+        }
+      ]
+    },
+    {
+      "qid": 39,
+      "query": "cartoon show for kids",
+      "gt_video_id": "video7029",
+      "gt_rank": 18,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9777",
+          "score": 0.384374
+        },
+        {
+          "rank": 2,
+          "video_id": "video7701",
+          "score": 0.361388
+        },
+        {
+          "rank": 3,
+          "video_id": "video8827",
+          "score": 0.355268
+        },
+        {
+          "rank": 4,
+          "video_id": "video9014",
+          "score": 0.328513
+        },
+        {
+          "rank": 5,
+          "video_id": "video8673",
+          "score": 0.324973
+        }
+      ]
+    },
+    {
+      "qid": 181,
+      "query": "a chef gives instructions to cook a recipe",
+      "gt_video_id": "video7148",
+      "gt_rank": 18,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8834",
+          "score": 0.364341
+        },
+        {
+          "rank": 2,
+          "video_id": "video9356",
+          "score": 0.346726
+        },
+        {
+          "rank": 3,
+          "video_id": "video7695",
+          "score": 0.336167
+        },
+        {
+          "rank": 4,
+          "video_id": "video9693",
+          "score": 0.330833
+        },
+        {
+          "rank": 5,
+          "video_id": "video7415",
+          "score": 0.314795
+        }
+      ]
+    },
+    {
+      "qid": 94,
+      "query": "a man is describing a vehicle and laughs about making a mistake",
+      "gt_video_id": "video7115",
+      "gt_rank": 17,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9677",
+          "score": 0.391192
+        },
+        {
+          "rank": 2,
+          "video_id": "video8973",
+          "score": 0.358856
+        },
+        {
+          "rank": 3,
+          "video_id": "video7844",
+          "score": 0.355668
+        },
+        {
+          "rank": 4,
+          "video_id": "video8420",
+          "score": 0.351802
+        },
+        {
+          "rank": 5,
+          "video_id": "video7110",
+          "score": 0.345247
+        }
+      ]
+    },
+    {
+      "qid": 49,
+      "query": "there is someone playing a game in a computer",
+      "gt_video_id": "video7035",
+      "gt_rank": 16,
+      "bucket": "top11_30",
+      "tags": [
+        "action",
+        "object"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7916",
+          "score": 0.33655
+        },
+        {
+          "rank": 2,
+          "video_id": "video8622",
+          "score": 0.334034
+        },
+        {
+          "rank": 3,
+          "video_id": "video9770",
+          "score": 0.330226
+        },
+        {
+          "rank": 4,
+          "video_id": "video8111",
+          "score": 0.326624
+        },
+        {
+          "rank": 5,
+          "video_id": "video7203",
+          "score": 0.306065
+        }
+      ]
+    },
+    {
+      "qid": 88,
+      "query": "a man and woman are seriously discussing about something",
+      "gt_video_id": "video7114",
+      "gt_rank": 15,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7546",
+          "score": 0.276198
+        },
+        {
+          "rank": 2,
+          "video_id": "video7613",
+          "score": 0.266807
+        },
+        {
+          "rank": 3,
+          "video_id": "video9824",
+          "score": 0.261134
+        },
+        {
+          "rank": 4,
+          "video_id": "video7680",
+          "score": 0.258711
+        },
+        {
+          "rank": 5,
+          "video_id": "video7685",
+          "score": 0.252142
+        }
+      ]
+    },
+    {
+      "qid": 159,
+      "query": "a man is streaming minecraft",
+      "gt_video_id": "video7143",
+      "gt_rank": 15,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8492",
+          "score": 0.36996
+        },
+        {
+          "rank": 2,
+          "video_id": "video8931",
+          "score": 0.369059
+        },
+        {
+          "rank": 3,
+          "video_id": "video8797",
+          "score": 0.355776
+        },
+        {
+          "rank": 4,
+          "video_id": "video7972",
+          "score": 0.348157
+        },
+        {
+          "rank": 5,
+          "video_id": "video7366",
+          "score": 0.347531
+        }
+      ]
+    },
+    {
+      "qid": 187,
+      "query": "a message about too much drinking",
+      "gt_video_id": "video7149",
+      "gt_rank": 14,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8471",
+          "score": 0.34372
+        },
+        {
+          "rank": 2,
+          "video_id": "video7726",
+          "score": 0.291115
+        },
+        {
+          "rank": 3,
+          "video_id": "video7466",
+          "score": 0.259663
+        },
+        {
+          "rank": 4,
+          "video_id": "video8067",
+          "score": 0.253939
+        },
+        {
+          "rank": 5,
+          "video_id": "video8075",
+          "score": 0.246118
+        }
+      ]
+    },
+    {
+      "qid": 21,
+      "query": "a man describing a car",
+      "gt_video_id": "video7026",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7110",
+          "score": 0.397584
+        },
+        {
+          "rank": 2,
+          "video_id": "video9677",
+          "score": 0.396376
+        },
+        {
+          "rank": 3,
+          "video_id": "video8901",
+          "score": 0.390519
+        },
+        {
+          "rank": 4,
+          "video_id": "video9508",
+          "score": 0.383517
+        },
+        {
+          "rank": 5,
+          "video_id": "video7138",
+          "score": 0.371377
+        }
+      ]
+    },
+    {
+      "qid": 61,
+      "query": "a white person with black dressing is giving demonstration using big video screen about some product placing on table",
+      "gt_video_id": "video7064",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "action",
+        "object",
+        "relation"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8626",
+          "score": 0.3223
+        },
+        {
+          "rank": 2,
+          "video_id": "video8804",
+          "score": 0.298744
+        },
+        {
+          "rank": 3,
+          "video_id": "video7563",
+          "score": 0.292549
+        },
+        {
+          "rank": 4,
+          "video_id": "video9117",
+          "score": 0.288942
+        },
+        {
+          "rank": 5,
+          "video_id": "video8622",
+          "score": 0.288476
+        }
+      ]
+    },
+    {
+      "qid": 105,
+      "query": "a clip from a movie is playing",
+      "gt_video_id": "video7118",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8475",
+          "score": 0.460828
+        },
+        {
+          "rank": 2,
+          "video_id": "video8808",
+          "score": 0.455478
+        },
+        {
+          "rank": 3,
+          "video_id": "video8832",
+          "score": 0.451747
+        },
+        {
+          "rank": 4,
+          "video_id": "video9804",
+          "score": 0.451738
+        },
+        {
+          "rank": 5,
+          "video_id": "video7782",
+          "score": 0.450539
+        }
+      ]
+    },
+    {
+      "qid": 129,
+      "query": "a man is spinning a vinyl record on a turntable",
+      "gt_video_id": "video7135",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7575",
+          "score": 0.231311
+        },
+        {
+          "rank": 2,
+          "video_id": "video8121",
+          "score": 0.225509
+        },
+        {
+          "rank": 3,
+          "video_id": "video8255",
+          "score": 0.211879
+        },
+        {
+          "rank": 4,
+          "video_id": "video7728",
+          "score": 0.210878
+        },
+        {
+          "rank": 5,
+          "video_id": "video9026",
+          "score": 0.201488
+        }
+      ]
+    },
+    {
+      "qid": 180,
+      "query": "a chef cooks a meal",
+      "gt_video_id": "video7148",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "other"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video7415",
+          "score": 0.30722
+        },
+        {
+          "rank": 2,
+          "video_id": "video9693",
+          "score": 0.307196
+        },
+        {
+          "rank": 3,
+          "video_id": "video9356",
+          "score": 0.301906
+        },
+        {
+          "rank": 4,
+          "video_id": "video7799",
+          "score": 0.296405
+        },
+        {
+          "rank": 5,
+          "video_id": "video9335",
+          "score": 0.295187
+        }
+      ]
+    },
+    {
+      "qid": 182,
+      "query": "a chef is cooking in the kithen",
+      "gt_video_id": "video7148",
+      "gt_rank": 13,
+      "bucket": "top11_30",
+      "tags": [
+        "action"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video9038",
+          "score": 0.342855
+        },
+        {
+          "rank": 2,
+          "video_id": "video8129",
+          "score": 0.342666
+        },
+        {
+          "rank": 3,
+          "video_id": "video8325",
+          "score": 0.333243
+        },
+        {
+          "rank": 4,
+          "video_id": "video7799",
+          "score": 0.329986
+        },
+        {
+          "rank": 5,
+          "video_id": "video8865",
+          "score": 0.326327
+        }
+      ]
+    },
+    {
+      "qid": 44,
+      "query": "a young man makes faces and acts strangly then discusses a selfie",
+      "gt_video_id": "video7034",
+      "gt_rank": 12,
+      "bucket": "top11_30",
+      "tags": [
+        "object",
+        "relation",
+        "person_attribute",
+        "temporal_order"
+      ],
+      "top5": [
+        {
+          "rank": 1,
+          "video_id": "video8456",
+          "score": 0.387792
+        },
+        {
+          "rank": 2,
+          "video_id": "video8321",
+          "score": 0.361226
+        },
+        {
+          "rank": 3,
+          "video_id": "video8301",
+          "score": 0.332122
+        },
+        {
+          "rank": 4,
+          "video_id": "video9871",
+          "score": 0.329776
+        },
+        {
+          "rank": 5,
+          "video_id": "video8119",
+          "score": 0.315834
+        }
+      ]
+    }
+  ]
+}

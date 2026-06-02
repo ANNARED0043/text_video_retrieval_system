@@ -1,0 +1,37 @@
+{
+  "schema_version": "high_quality_learning_pool_diagnosis_v1",
+  "train_queries": "msrvtt_train_9k_safe_train_queries.jsonl",
+  "teacher_supervision": "outputs\\tables\\analysis\\viclip_teacher_supervision_stage2_safe_train_q800_gpu_v1.jsonl",
+  "alignment_teacher": "outputs\\tables\\analysis\\multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+  "thresholds": {
+    "max_teacher_rank": 12,
+    "max_uncertainty": 0.995,
+    "min_overlap": 0.0,
+    "alignment_weight": 1.0,
+    "memory_topk": 500
+  },
+  "candidates": 800,
+  "teacher_entries": 800,
+  "accepted_before_topk": 0,
+  "selected_after_topk": 0,
+  "target_effective_samples": 500,
+  "target_met": false,
+  "acceptance_rate_before_topk": 0.0,
+  "selected_rate": 0.0,
+  "quality_tiers": {},
+  "rejected_reasons": {
+    "gt_missing_in_teacher": 339,
+    "threshold_reject": 461
+  },
+  "all_teacher_gt_rank_mean": 3.416486,
+  "all_teacher_gt_rank_median": 2.0,
+  "accepted_gt_rank_mean": null,
+  "accepted_gt_rank_median": null,
+  "accepted_uncertainty_mean": null,
+  "accepted_alignment_overlap_mean": null,
+  "accepted_prototype_overlap_mean": null,
+  "selected_acceptance_score_mean": null,
+  "selected_gt_rank_mean": null,
+  "selected_uncertainty_mean": null,
+  "next_action": "Increase max_train_queries or relax rank/uncertainty thresholds before training."
+}

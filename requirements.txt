@@ -1,0 +1,8 @@
+openai>=1.0.0
+open-clip-torch
+faiss-cpu
+numpy
+pillow
+tqdm
+python-dotenv
+streamlit

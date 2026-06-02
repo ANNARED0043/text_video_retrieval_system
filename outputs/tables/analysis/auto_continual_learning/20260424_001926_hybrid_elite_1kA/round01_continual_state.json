@@ -1,0 +1,67 @@
+{
+  "schema_version": "continual_layer_state_v1",
+  "time": "2026-04-24T00:24:31",
+  "active_stage": "Stage 3: Continual Learning and Memory",
+  "policy": {
+    "mode": "acceptance_gated_promotion",
+    "min_r1_gain": 0.5,
+    "tie_breakers": [
+      "lower MedR",
+      "lower MnR"
+    ],
+    "do_not_promote_if": [
+      "candidate lowers R@1",
+      "candidate only improves auxiliary losses",
+      "candidate uses 1kA gt as training signal"
+    ]
+  },
+  "current_best": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.json",
+    "stage_label": "stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1",
+    "best_method": "adapter",
+    "metrics": {
+      "R@1": 50.5,
+      "R@5": 64.5,
+      "R@10": 73.5,
+      "MnR": 20.42,
+      "MedR": 1.0
+    },
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+    "memory_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1_memory.json",
+    "alignment_teacher": "outputs\\tables\\analysis\\multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+    "multiview_features": "outputs\\tables\\analysis\\multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz"
+  },
+  "candidate_review": {
+    "candidate_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round01_c02_summary.json",
+    "candidate_metrics": {
+      "R@1": 49.0,
+      "R@5": 66.0,
+      "R@10": 75.0,
+      "MnR": 21.255,
+      "MedR": 2.0
+    },
+    "previous_best_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.json",
+    "previous_best_metrics": {
+      "R@1": 50.5,
+      "R@5": 64.5,
+      "R@10": 73.5,
+      "MnR": 20.42,
+      "MedR": 1.0
+    },
+    "promoted": false,
+    "reason": "Candidate did not beat current best R@1=50.5."
+  },
+  "memory_quality": {
+    "candidates": 500,
+    "accepted": 222,
+    "acceptance_rate": 0.444,
+    "memory_topk": 300,
+    "accepted_gt_rank_mean": 3.274775,
+    "accepted_top1_is_gt": 106,
+    "accepted_top1_is_gt_rate": 0.477477,
+    "accepted_uncertainty_mean": 0.962969,
+    "accepted_prototype_overlap_mean": 1.0,
+    "accepted_alignment_overlap_mean": 0.109763
+  },
+  "next_round_rule": "Use safe_train for learning, safe_dev for model selection, and 1kA only as locked reporting. A new continual round must write a candidate summary first, then pass this promotion gate."
+}

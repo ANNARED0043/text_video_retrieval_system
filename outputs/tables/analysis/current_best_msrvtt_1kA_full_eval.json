@@ -1,0 +1,67 @@
+{
+  "stage_label": "current_best_msrvtt_1kA_full_eval",
+  "time": "2026-06-02T15:21:29",
+  "eval_manifest": "msrvtt_fixed_1kA.jsonl",
+  "eval_queries": "msrvtt_1kA_test_queries.jsonl",
+  "student_model_name": "ViT-H-14",
+  "student_pretrained": "laion2b_s32b_b79k",
+  "eval_rows_used": 1000,
+  "artifacts": {
+    "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\current_best_msrvtt_1kA_full_eval.json",
+    "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+    "semantic_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\semantic_memory.json",
+    "alignment_teacher": "outputs\\tables\\analysis\\multiframe_alignment_teacher_train_q500_targets_plus_1kA_f6_v33.jsonl",
+    "alignment_teacher_weight": 0.08,
+    "multiview_features": "outputs\\tables\\analysis\\multiview_features_train_q500_targets_plus_1kA_fpv2_v35.npz",
+    "multiview_weight": 0.08,
+    "multiview_pooling": "max",
+    "video_temporal_adapter_weight": 0.0,
+    "component_view_weight": 0.0,
+    "query_aware_fusion": false
+  },
+  "methods": {
+    "baseline": {
+      "N": 1000,
+      "R@1": 38.4,
+      "R@5": 60.5,
+      "R@10": 70.19999999999999,
+      "MnR": 29.919,
+      "MedR": 3.0
+    },
+    "adapter": {
+      "N": 1000,
+      "R@1": 38.7,
+      "R@5": 61.1,
+      "R@10": 70.89999999999999,
+      "MnR": 29.112,
+      "MedR": 3.0
+    }
+  },
+  "augmented_methods": {
+    "baseline": {
+      "N": 1000,
+      "R@1": 38.6,
+      "R@5": 60.699999999999996,
+      "R@10": 70.3,
+      "MnR": 29.33,
+      "MedR": 3.0
+    },
+    "adapter": {
+      "N": 1000,
+      "R@1": 39.0,
+      "R@5": 61.1,
+      "R@10": 70.89999999999999,
+      "MnR": 28.62,
+      "MedR": 3.0
+    }
+  },
+  "best_method": "adapter",
+  "best_metrics": {
+    "N": 1000,
+    "R@1": 38.7,
+    "R@5": 61.1,
+    "R@10": 70.89999999999999,
+    "MnR": 29.112,
+    "MedR": 3.0
+  }
+}

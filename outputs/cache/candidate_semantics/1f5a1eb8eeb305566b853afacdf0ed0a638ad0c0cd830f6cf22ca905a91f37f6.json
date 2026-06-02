@@ -1,0 +1,19 @@
+{
+  "video_id": "video9347",
+  "segment_id": "video9347_seg0000",
+  "summary": "A woman shows a leopard-print pet bed and a small dog is seen sitting on a chair.",
+  "tags": [
+    "woman",
+    "small dog",
+    "chair",
+    "leopard-print pet bed",
+    "indoor",
+    "living room"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 40,
+    "total_tokens": 468
+  }
+}

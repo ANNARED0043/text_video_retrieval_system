@@ -1,0 +1,22 @@
+{
+  "video_id": "video9969",
+  "segment_id": "video9969_seg0000",
+  "summary": "Two women are sitting on a bed, talking, with one holding a cat and the other holding a cup.",
+  "tags": [
+    "two women",
+    "bed",
+    "cat",
+    "cup",
+    "string lights",
+    "colorful ornaments",
+    "casual clothing",
+    "indoor",
+    "conversation"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 48,
+    "total_tokens": 476
+  }
+}

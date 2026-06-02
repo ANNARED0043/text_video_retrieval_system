@@ -1,0 +1,263 @@
+{
+  "schema_version": "continual_effect_diagnosis_v1",
+  "time": "2026-04-24T00:34:45",
+  "current_best": {
+    "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.json",
+    "metrics": {
+      "R@1": 50.5,
+      "R@5": 64.5,
+      "R@10": 73.5,
+      "MedR": 1.0,
+      "MnR": 20.42
+    }
+  },
+  "runs": [
+    {
+      "label": "round01",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round01_c01_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round02",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round01_c02_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 66.0,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.255
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.5,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.835
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round03",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round01_c03_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round04",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round02_c01_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round05",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round02_c02_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 66.0,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.255
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.5,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.835
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round06",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round02_c03_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round07",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round03_c01_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round08",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round03_c02_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 66.0,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.255
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.5,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.835
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    },
+    {
+      "label": "round09",
+      "path": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\auto_continual_learning\\20260424_001926_hybrid_elite_1kA\\round03_c03_summary.json",
+      "metrics": {
+        "R@1": 49.0,
+        "R@5": 65.5,
+        "R@10": 75.0,
+        "MedR": 2.0,
+        "MnR": 21.21
+      },
+      "delta_vs_current_best": {
+        "R@1": -1.5,
+        "R@5": 1.0,
+        "R@10": 1.5,
+        "MedR": 1.0,
+        "MnR": 0.79
+      },
+      "memory_stats": {
+        "accepted": 0,
+        "acceptance_rate": 0.0,
+        "accepted_gt_rank_mean": null,
+        "accepted_top1_is_gt_rate": null,
+        "accepted_uncertainty_mean": null,
+        "accepted_alignment_overlap_mean": null
+      }
+    }
+  ],
+  "missing_runs": [],
+  "diagnosis": [
+    "relaxed_memory 缺失：第四轮没有生成 summary，无法判断放宽 gate 的效果。",
+    "本组实验最优 candidate 是 round02。"
+  ],
+  "learning_effect_criteria": {
+    "memory_quantity": "accepted should increase without severe uncertainty degradation.",
+    "memory_quality": "accepted_gt_rank_mean should decrease and accepted_top1_is_gt_rate should rise.",
+    "no_forgetting": "fixed reference metrics should not drop.",
+    "feedback_gain": "a held-out or newly collected feedback set should improve across rounds.",
+    "recall_gain": "R@5/R@10 should eventually improve before reliable R@1 gains."
+  },
+  "next_action_rule": "If current_memory beats no_memory only on R@1 but hurts R@5/R@10, keep v3.5 as best and redesign continual learning around feedback/replay rather than only changing gate thresholds."
+}

@@ -1,0 +1,6 @@
+建议下次恢复时按这个顺序看：
+
+project_status_handoff_zh.md
+technical_stage_notes.md
+remote_training_runbook.md
+todo.md

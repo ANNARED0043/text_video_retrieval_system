@@ -1,0 +1,44 @@
+{
+  "schema_version": "error_driven_agent_loop_feedback_v2",
+  "time": "2026-04-24T16:33:52",
+  "run_id": "20260424_163109_error_driven_safe_dev",
+  "eval_split": "safe_dev",
+  "rounds_requested": 1,
+  "promoted_rounds": 1,
+  "locked_report_summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.json",
+  "final_active_summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_summary.json",
+  "rounds": [
+    {
+      "round": 1,
+      "feedback_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_feedback_memory.jsonl",
+      "feedback_teacher": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_feedback_teacher.jsonl",
+      "feedback_selected_rows": 201,
+      "feedback_min_gt_rank": 1,
+      "feedback_max_gt_rank": 30,
+      "candidate_summary": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_summary.json",
+      "candidate_metrics": {
+        "R@1": 40.5,
+        "R@5": 62.5,
+        "R@10": 72.0,
+        "MedR": 2.0,
+        "MnR": 40.57
+      },
+      "reference_summary_before_round": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_summary.json",
+      "reference_metrics_before_round": {
+        "R@1": 40.0,
+        "R@5": 60.0,
+        "R@10": 71.5,
+        "MedR": 2.0,
+        "MnR": 42.735
+      },
+      "delta_vs_reference_before_round": {
+        "R@1": 0.5,
+        "R@5": 2.5,
+        "R@10": 0.5
+      },
+      "promoted": true,
+      "promotion_reason": "R@1 improved by 0.5000.",
+      "state_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_163109_error_driven_safe_dev\\round01_continual_state.json"
+    }
+  ]
+}

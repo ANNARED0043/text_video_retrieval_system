@@ -1,0 +1,5180 @@
+{
+  "schema_version": "rewrite_query_clarity_diagnosis_v1",
+  "total_queries": 200,
+  "rewrite_triggered": 129,
+  "rewrite_rate": 0.645,
+  "clear_or_not_rewritten": 71,
+  "clear_or_not_rewritten_rate": 0.355,
+  "rank_transition_counts": {
+    "unchanged": 74,
+    "improved_rank": 35,
+    "worse_rank": 17,
+    "fixed_to_top1": 2,
+    "hurt_top1": 1
+  },
+  "trigger_reason_counts": {
+    "small_margin": 103,
+    "age_sensitive": 20,
+    "count_sensitive": 31,
+    "scene_constraint": 5,
+    "low_top1": 15
+  },
+  "generic_language_rate": 0.165,
+  "generic_language_rate_rewritten": 0.1783,
+  "baseline_top1": 95,
+  "rewrite_top1": 96,
+  "rewrite_improved_count": 37,
+  "rewrite_worse_count": 18,
+  "useful_rewrite_count": 37,
+  "useful_rewrite_issue_counts": {
+    "scene_missing": 34,
+    "relatively_clear": 2,
+    "weak_action": 10,
+    "generic_object": 10,
+    "attribute_missing": 14,
+    "short_query": 6
+  },
+  "useful_rewrite_examples": [
+    {
+      "qid": 15,
+      "query": "a boy running is running without dress",
+      "rewritten_query": "A young boy running outdoors without wearing a shirt or upper clothing.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 75,
+      "rewrite_rank": 69,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 16,
+      "query": "a child is running naked across the grass",
+      "rewritten_query": "A young child running barefoot and without clothes across a grassy field.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 43,
+      "rewrite_rank": 39,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 18,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 19,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 27,
+      "query": "a man is discussing how the program is loading up and if there are any problems or questions to message him",
+      "rewritten_query": "A man is explaining the program loading process on screen and inviting viewers to message him with any problems or questions.",
+      "gt_video_id": "video7027",
+      "baseline_rank": 197,
+      "rewrite_rank": 172,
+      "rank_delta": 25,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 21,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 40,
+      "query": "a boy is talking holds a boy toy by its leg and continues to talk",
+      "rewritten_query": "A young boy is holding a toy figure by its leg while talking continuously.",
+      "gt_video_id": "video7034",
+      "baseline_rank": 29,
+      "rewrite_rank": 22,
+      "rank_delta": 7,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 48,
+      "query": "there are some different colors light spreading inside a studio ",
+      "rewritten_query": "Multicolored lights casting vibrant beams and patterns inside a studio space.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 201,
+      "rewrite_rank": 172,
+      "rank_delta": 29,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 49,
+      "query": "there is someone playing a game in a computer",
+      "rewritten_query": "A person sitting at a desk actively playing a video game on a desktop computer.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 17,
+      "rewrite_rank": 9,
+      "rank_delta": 8,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 52,
+      "query": "a man is puting off the fire",
+      "rewritten_query": "A man is extinguishing a fire using a fire extinguisher.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 201,
+      "rewrite_rank": 124,
+      "rank_delta": 77,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 54,
+      "query": "a person sprayed fire extinguisher on a vehicle",
+      "rewritten_query": "A person using a fire extinguisher to spray foam or powder onto a vehicle to put out a fire.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 45,
+      "rewrite_rank": 41,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 60,
+      "query": "a man is introducing  some new products on the desk",
+      "rewritten_query": "A man is standing behind a desk, presenting and explaining several new products displayed on the surface.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 9,
+      "rewrite_rank": 6,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 62,
+      "query": "the young man is explaining about the product on the table",
+      "rewritten_query": "A young man is standing next to a table, explaining the features of a product displayed on it.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 91,
+      "rewrite_rank": 58,
+      "rank_delta": 33,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 63,
+      "query": "there is a man advertising some products while using a graph",
+      "rewritten_query": "A man is presenting and advertising products while pointing to a graph displayed on a screen.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 7,
+      "rewrite_rank": 5,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 68,
+      "query": "people are diagnosing problems with a vehicle and being interviewed",
+      "rewritten_query": "People inspecting and diagnosing mechanical issues on a vehicle while being interviewed on camera.",
+      "gt_video_id": "video7110",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 70,
+      "query": "a cartoon about spongebob sqaurepants",
+      "rewritten_query": "A colorful animated cartoon featuring SpongeBob SquarePants in his underwater world.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 10,
+      "rewrite_rank": 5,
+      "rank_delta": 5,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 79,
+      "query": "there is a man throwing ball to the basket",
+      "rewritten_query": "A man is throwing a basketball towards a hoop on an outdoor court.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 3,
+      "rewrite_rank": 2,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 85,
+      "query": "a girl and a man are talking to each other",
+      "rewritten_query": "A young woman and an adult man are standing and having a conversation with each other.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 20,
+      "rewrite_rank": 16,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 86,
+      "query": "a girl helps a man detective prevent crimes",
+      "rewritten_query": "A young girl assists a male detective in stopping crimes and solving cases.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 14,
+      "rewrite_rank": 11,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 87,
+      "query": "a man and a woman talking to each other",
+      "rewritten_query": "A man and a woman standing and having a conversation while facing each other.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 11,
+      "rewrite_rank": 9,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 88,
+      "query": "a man and woman are seriously discussing about something",
+      "rewritten_query": "A man and a woman are sitting closely and having an intense, serious conversation.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 24,
+      "rewrite_rank": 18,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 106,
+      "query": "a girl in bed knocking on the wall",
+      "rewritten_query": "A young girl lying in bed gently knocking on the wall beside her.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 7,
+      "rewrite_rank": 6,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 108,
+      "query": "a girl is knocking on the wall",
+      "rewritten_query": "A young girl is gently knocking on a plain wall with her hand.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 47,
+      "rewrite_rank": 41,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 109,
+      "query": "a girl knocking on a wall",
+      "rewritten_query": "A young girl gently knocking her hand against a plain wall.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 49,
+      "rewrite_rank": 39,
+      "rank_delta": 10,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 126,
+      "query": "a man in a music video screams shut up a bunch of times",
+      "rewritten_query": "A man in a music video repeatedly screams \"shut up\" with intense emotion.",
+      "gt_video_id": "video7135",
+      "baseline_rank": 29,
+      "rewrite_rank": 20,
+      "rank_delta": 9,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 127,
+      "query": "group of mans perform band high sound in the private place",
+      "rewritten_query": "Group of men playing musical instruments loudly in a private indoor space.",
+      "gt_video_id": "video7135",
+      "baseline_rank": 39,
+      "rewrite_rank": 38,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.65,
+      "reasons": [
+        "count_sensitive",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 140,
+      "query": "a food item is preparing with a floor powder",
+      "rewritten_query": "A person is preparing a food item using flour powder on a kitchen surface.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 6,
+      "rewrite_rank": 4,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 142,
+      "query": "a person is making a dish",
+      "rewritten_query": "A person is preparing and cooking a meal in a kitchen.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 42,
+      "rewrite_rank": 40,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 143,
+      "query": "a person is mixing food ingredients",
+      "rewritten_query": "A person is stirring and combining various food ingredients in a bowl.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 11,
+      "rewrite_rank": 10,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 144,
+      "query": "a person is preparing a recipe",
+      "rewritten_query": "A person is chopping ingredients and mixing them while preparing a recipe in a kitchen.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 27,
+      "rewrite_rank": 25,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 168,
+      "query": "a women is talking about the economy of france and about a man feeling the country s pain",
+      "rewritten_query": "A woman is speaking about France's economy while describing a man who empathizes deeply with the country's struggles.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 52,
+      "rewrite_rank": 45,
+      "rank_delta": 7,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 18,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 169,
+      "query": "women with straight blonde hair and glasses talks while wearing a red shirt and a black jacket",
+      "rewritten_query": "A woman with straight blonde hair and glasses speaking, dressed in a red shirt and a black jacket.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 17,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 180,
+      "query": "a chef cooks a meal",
+      "rewritten_query": "A chef wearing a white uniform prepares and cooks a meal in a kitchen.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 13,
+      "rewrite_rank": 12,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 181,
+      "query": "a chef gives instructions to cook a recipe",
+      "rewritten_query": "A chef standing in a kitchen clearly explaining step-by-step instructions to cook a recipe.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 18,
+      "rewrite_rank": 17,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 182,
+      "query": "a chef is cooking in the kithen",
+      "rewritten_query": "A chef is preparing food while cooking in a kitchen with visible utensils and appliances.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 13,
+      "rewrite_rank": 10,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 184,
+      "query": "a chef pours flower into the pan",
+      "rewritten_query": "A chef pours flour from a container into a hot pan on the stove.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 10,
+      "rewrite_rank": 5,
+      "rank_delta": 5,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 185,
+      "query": "a commercial gives descriptions of virtuous characteristics of a good woman",
+      "rewritten_query": "A commercial describing the virtuous qualities and admirable traits of a good woman through spoken narration and visual storytelling.",
+      "gt_video_id": "video7149",
+      "baseline_rank": 6,
+      "rewrite_rank": 4,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 186,
+      "query": "a few brief clips of a woman showing plot points for a show",
+      "rewritten_query": "Short video clips of a woman explaining key plot points of a television show.",
+      "gt_video_id": "video7149",
+      "baseline_rank": 182,
+      "rewrite_rank": 140,
+      "rank_delta": 42,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    }
+  ],
+  "fixed_to_top1_examples": [
+    {
+      "qid": 68,
+      "query": "people are diagnosing problems with a vehicle and being interviewed",
+      "rewritten_query": "People inspecting and diagnosing mechanical issues on a vehicle while being interviewed on camera.",
+      "gt_video_id": "video7110",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 169,
+      "query": "women with straight blonde hair and glasses talks while wearing a red shirt and a black jacket",
+      "rewritten_query": "A woman with straight blonde hair and glasses speaking, dressed in a red shirt and a black jacket.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 17,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    }
+  ],
+  "hurt_top1_examples": [
+    {
+      "qid": 72,
+      "query": "a cartoon snail sings",
+      "rewritten_query": "An animated cartoon snail character singing a song.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 1,
+      "rewrite_rank": 2,
+      "rank_delta": -1,
+      "transition": "hurt_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    }
+  ],
+  "improved_examples": [
+    {
+      "qid": 15,
+      "query": "a boy running is running without dress",
+      "rewritten_query": "A young boy running outdoors without wearing a shirt or upper clothing.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 75,
+      "rewrite_rank": 69,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 16,
+      "query": "a child is running naked across the grass",
+      "rewritten_query": "A young child running barefoot and without clothes across a grassy field.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 43,
+      "rewrite_rank": 39,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 18,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 19,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 27,
+      "query": "a man is discussing how the program is loading up and if there are any problems or questions to message him",
+      "rewritten_query": "A man is explaining the program loading process on screen and inviting viewers to message him with any problems or questions.",
+      "gt_video_id": "video7027",
+      "baseline_rank": 197,
+      "rewrite_rank": 172,
+      "rank_delta": 25,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 21,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 40,
+      "query": "a boy is talking holds a boy toy by its leg and continues to talk",
+      "rewritten_query": "A young boy is holding a toy figure by its leg while talking continuously.",
+      "gt_video_id": "video7034",
+      "baseline_rank": 29,
+      "rewrite_rank": 22,
+      "rank_delta": 7,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 48,
+      "query": "there are some different colors light spreading inside a studio ",
+      "rewritten_query": "Multicolored lights casting vibrant beams and patterns inside a studio space.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 201,
+      "rewrite_rank": 172,
+      "rank_delta": 29,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 49,
+      "query": "there is someone playing a game in a computer",
+      "rewritten_query": "A person sitting at a desk actively playing a video game on a desktop computer.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 17,
+      "rewrite_rank": 9,
+      "rank_delta": 8,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "qid": 0,
+      "query": "a person is preparing some art",
+      "rewritten_query": "a person is preparing some art",
+      "gt_video_id": "video7020",
+      "baseline_rank": 14,
+      "rewrite_rank": 14,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 1,
+      "query": "a person making stuff out of clay",
+      "rewritten_query": "A person sculpting and shaping objects from clay by hand.",
+      "gt_video_id": "video7020",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 2,
+      "query": "a woman  creating a fondant baby and flower",
+      "rewritten_query": "A woman sculpting a baby figure and flowers out of fondant for cake decoration.",
+      "gt_video_id": "video7020",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "age_sensitive"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 3,
+      "query": "a woman constructing a sculpture with playdoh",
+      "rewritten_query": "A woman shaping and assembling a colorful Play-Doh sculpture with her hands.",
+      "gt_video_id": "video7020",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 4,
+      "query": "a woman creates a baby out of craft supplies",
+      "rewritten_query": "A woman assembling a baby figure using colorful craft supplies and art materials.",
+      "gt_video_id": "video7020",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "age_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 5,
+      "query": "a baseball batter hits the ball to the fence and a outfielder goes after it",
+      "rewritten_query": "a baseball batter hits the ball to the fence and a outfielder goes after it",
+      "gt_video_id": "video7021",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 6,
+      "query": "a baseball game is played",
+      "rewritten_query": "A baseball game in progress with players actively pitching, batting, and fielding on the diamond.",
+      "gt_video_id": "video7021",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 7,
+      "query": "a baseball game taking place",
+      "rewritten_query": "A live baseball game in progress with players on the field and spectators in the stands.",
+      "gt_video_id": "video7021",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 8,
+      "query": "a baseball player hits a ball to the back of the field",
+      "rewritten_query": "A baseball player swings and hits the ball deep toward the outfield.",
+      "gt_video_id": "video7021",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 9,
+      "query": "a batter hitting a ball and players on a field",
+      "rewritten_query": "A baseball batter swinging at a pitched ball with players positioned on the field behind him.",
+      "gt_video_id": "video7021",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 10,
+      "query": "a toy cat is bathing in soapy water in a toy bathtub",
+      "rewritten_query": "a toy cat is bathing in soapy water in a toy bathtub",
+      "gt_video_id": "video7024",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 11,
+      "query": "small plastic cat being washed and rubbed in a plastic tub",
+      "rewritten_query": "small plastic cat being washed and rubbed in a plastic tub",
+      "gt_video_id": "video7024",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 12,
+      "query": "there is a someone playing with a deer toy",
+      "rewritten_query": "there is a someone playing with a deer toy",
+      "gt_video_id": "video7024",
+      "baseline_rank": 3,
+      "rewrite_rank": 3,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 13,
+      "query": "a person pretends to bathe a small plastic cat using a bathroom play set of equally small size",
+      "rewritten_query": "a person pretends to bathe a small plastic cat using a bathroom play set of equally small size",
+      "gt_video_id": "video7024",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 18,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 14,
+      "query": "the head of doll is being washed by someone in soapy water",
+      "rewritten_query": "the head of doll is being washed by someone in soapy water",
+      "gt_video_id": "video7024",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 15,
+      "query": "a boy running is running without dress",
+      "rewritten_query": "A young boy running outdoors without wearing a shirt or upper clothing.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 75,
+      "rewrite_rank": 69,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 16,
+      "query": "a child is running naked across the grass",
+      "rewritten_query": "A young child running barefoot and without clothes across a grassy field.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 43,
+      "rewrite_rank": 39,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 17,
+      "query": "a naked boy running on a beach then a picture of a man",
+      "rewritten_query": "A young child running barefoot on a sandy beach followed by a close-up image of an adult man.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 5,
+      "rewrite_rank": 5,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 18,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 19,
+      "query": "a naked child runs through a field",
+      "rewritten_query": "A young child without clothes running through a grassy field outdoors.",
+      "gt_video_id": "video7025",
+      "baseline_rank": 28,
+      "rewrite_rank": 27,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 20,
+      "query": "a guy talks about the features of the jeep cherokee",
+      "rewritten_query": "a guy talks about the features of the jeep cherokee",
+      "gt_video_id": "video7026",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 21,
+      "query": "a man describing a car",
+      "rewritten_query": "A man standing and explaining the features of a car.",
+      "gt_video_id": "video7026",
+      "baseline_rank": 13,
+      "rewrite_rank": 13,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 22,
+      "query": "a man in a car talking to a camera",
+      "rewritten_query": "A man sitting inside a car speaking directly to a camera.",
+      "gt_video_id": "video7026",
+      "baseline_rank": 6,
+      "rewrite_rank": 6,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 23,
+      "query": "a man is describing speed control features of a cherokee vehicle",
+      "rewritten_query": "a man is describing speed control features of a cherokee vehicle",
+      "gt_video_id": "video7026",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 24,
+      "query": "a man is driving a car for review",
+      "rewritten_query": "a man is driving a car for review",
+      "gt_video_id": "video7026",
+      "baseline_rank": 7,
+      "rewrite_rank": 7,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 25,
+      "query": "there is graphics of the universe in blue showing in the tv",
+      "rewritten_query": "there is graphics of the universe in blue showing in the tv",
+      "gt_video_id": "video7027",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 26,
+      "query": "a screen with a man is sitting on a bench in a glimpse",
+      "rewritten_query": "A screen showing a man sitting alone on a bench in a brief glimpse.",
+      "gt_video_id": "video7027",
+      "baseline_rank": 91,
+      "rewrite_rank": 92,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 27,
+      "query": "a man is discussing how the program is loading up and if there are any problems or questions to message him",
+      "rewritten_query": "A man is explaining the program loading process on screen and inviting viewers to message him with any problems or questions.",
+      "gt_video_id": "video7027",
+      "baseline_rank": 197,
+      "rewrite_rank": 172,
+      "rank_delta": 25,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 21,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 28,
+      "query": "television screen with display of planet  earth and someone tells about it",
+      "rewritten_query": "television screen with display of planet  earth and someone tells about it",
+      "gt_video_id": "video7027",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 29,
+      "query": "the screen of tv shows the planet and someone describes it",
+      "rewritten_query": "the screen of tv shows the planet and someone describes it",
+      "gt_video_id": "video7027",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 30,
+      "query": "a boy band sings and dances in front of a chinese pagoda",
+      "rewritten_query": "A group of young male performers sings and dances energetically in front of a traditional multi-tiered Chinese pagoda.",
+      "gt_video_id": "video7028",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 31,
+      "query": "the backstreet boys sing in front of a japanese pagoda and in a restaurant",
+      "rewritten_query": "the backstreet boys sing in front of a japanese pagoda and in a restaurant",
+      "gt_video_id": "video7028",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 14,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 32,
+      "query": "the singing group the backstreet boys stands in front of a japanese pagoda sing and dance",
+      "rewritten_query": "The Backstreet Boys singing and dancing together in front of a traditional Japanese pagoda.",
+      "gt_video_id": "video7028",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 16,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 33,
+      "query": "a man is singing and walking through the street ",
+      "rewritten_query": "a man is singing and walking through the street ",
+      "gt_video_id": "video7028",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.1,
+      "reasons": [
+        "scene_constraint"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "relatively_clear"
+      ]
+    },
+    {
+      "qid": 34,
+      "query": "different shots for a song in front of a temple in shops on street etc sung by three guys",
+      "rewritten_query": "Various camera shots of three men singing a song in front of a temple, inside shops, and on a busy street.",
+      "gt_video_id": "video7028",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.30000000000000004,
+      "reasons": [
+        "count_sensitive",
+        "scene_constraint"
+      ],
+      "token_count": 19,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 35,
+      "query": "a cartoon character picks up a phone",
+      "rewritten_query": "a cartoon character picks up a phone",
+      "gt_video_id": "video7029",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 36,
+      "query": "a cartoon character speaks on a phone",
+      "rewritten_query": "a cartoon character speaks on a phone",
+      "gt_video_id": "video7029",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 37,
+      "query": "a cartoon squid is using the phone",
+      "rewritten_query": "a cartoon squid is using the phone",
+      "gt_video_id": "video7029",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 38,
+      "query": "animated cartoon scene spongebob",
+      "rewritten_query": "Animated cartoon scene featuring SpongeBob SquarePants in a colorful underwater setting.",
+      "gt_video_id": "video7029",
+      "baseline_rank": 10,
+      "rewrite_rank": 11,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 39,
+      "query": "cartoon show for kids",
+      "rewritten_query": "cartoon show for kids",
+      "gt_video_id": "video7029",
+      "baseline_rank": 18,
+      "rewrite_rank": 18,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 40,
+      "query": "a boy is talking holds a boy toy by its leg and continues to talk",
+      "rewritten_query": "A young boy is holding a toy figure by its leg while talking continuously.",
+      "gt_video_id": "video7034",
+      "baseline_rank": 29,
+      "rewrite_rank": 22,
+      "rank_delta": 7,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 41,
+      "query": "a man holding a doll upside down and talking about videos",
+      "rewritten_query": "a man holding a doll upside down and talking about videos",
+      "gt_video_id": "video7034",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 42,
+      "query": "a tshirt young man talking from a studio",
+      "rewritten_query": "A young man wearing a t-shirt speaking in a professional studio setting.",
+      "gt_video_id": "video7034",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action"
+      ]
+    },
+    {
+      "qid": 43,
+      "query": "there is a black tshirt man showing a toy",
+      "rewritten_query": "A man wearing a black t-shirt is holding and showing a toy.",
+      "gt_video_id": "video7034",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 44,
+      "query": "a young man makes faces and acts strangly then discusses a selfie",
+      "rewritten_query": "a young man makes faces and acts strangly then discusses a selfie",
+      "gt_video_id": "video7034",
+      "baseline_rank": 9,
+      "rewrite_rank": 9,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 45,
+      "query": "a man is playing world of warcraft with many other players",
+      "rewritten_query": "A man is playing World of Warcraft on his computer, interacting with many other players online.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 46,
+      "query": "the lighting effects are very nice and the cartoon creatures moving nicely",
+      "rewritten_query": "The video features vibrant lighting effects and smoothly animated cartoon creatures moving gracefully.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 77,
+      "rewrite_rank": 81,
+      "rank_delta": -4,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 47,
+      "query": "a world of warcraft player types something into the chat",
+      "rewritten_query": "A World of Warcraft player is shown typing a message into the in-game chat window.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 48,
+      "query": "there are some different colors light spreading inside a studio ",
+      "rewritten_query": "Multicolored lights casting vibrant beams and patterns inside a studio space.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 201,
+      "rewrite_rank": 172,
+      "rank_delta": 29,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 49,
+      "query": "there is someone playing a game in a computer",
+      "rewritten_query": "A person sitting at a desk actively playing a video game on a desktop computer.",
+      "gt_video_id": "video7035",
+      "baseline_rank": 17,
+      "rewrite_rank": 9,
+      "rank_delta": 8,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 50,
+      "query": "a guy extinguishes something then talks into the camera with another guy",
+      "rewritten_query": "A man puts out a fire or flame, then speaks directly to the camera alongside another man.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 51,
+      "query": "a man extinguishes a fire outside",
+      "rewritten_query": "A man uses a tool or object to put out a small fire burning outdoors.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 31,
+      "rewrite_rank": 36,
+      "rank_delta": -5,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "short_query"
+      ]
+    },
+    {
+      "qid": 52,
+      "query": "a man is puting off the fire",
+      "rewritten_query": "A man is extinguishing a fire using a fire extinguisher.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 201,
+      "rewrite_rank": 124,
+      "rank_delta": 77,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 53,
+      "query": "a person is explaining something",
+      "rewritten_query": "A person is standing and explaining something with hand gestures in a well-lit room.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 201,
+      "rewrite_rank": 266,
+      "rank_delta": -65,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 54,
+      "query": "a person sprayed fire extinguisher on a vehicle",
+      "rewritten_query": "A person using a fire extinguisher to spray foam or powder onto a vehicle to put out a fire.",
+      "gt_video_id": "video7060",
+      "baseline_rank": 45,
+      "rewrite_rank": 41,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 55,
+      "query": "in a fish tank two red fishes are playing",
+      "rewritten_query": "Two red fish swimming and playing together inside a clear fish tank.",
+      "gt_video_id": "video7061",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 56,
+      "query": "music playing in the background showing fish swiming around",
+      "rewritten_query": "music playing in the background showing fish swiming around",
+      "gt_video_id": "video7061",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 57,
+      "query": "two orange and white fish are swimming together",
+      "rewritten_query": "Two orange and white fish swimming closely side by side in clear water",
+      "gt_video_id": "video7061",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 58,
+      "query": "two fishes are moving in a water aquarium",
+      "rewritten_query": "Two fish swimming together inside a clear water aquarium.",
+      "gt_video_id": "video7061",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 59,
+      "query": "there are two fish floating in to the water",
+      "rewritten_query": "Two fish are floating gently on the surface of the water.",
+      "gt_video_id": "video7061",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 60,
+      "query": "a man is introducing  some new products on the desk",
+      "rewritten_query": "A man is standing behind a desk, presenting and explaining several new products displayed on the surface.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 9,
+      "rewrite_rank": 6,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 61,
+      "query": "a white person with black dressing is giving demonstration using big video screen about some product placing on table",
+      "rewritten_query": "a white person with black dressing is giving demonstration using big video screen about some product placing on table",
+      "gt_video_id": "video7064",
+      "baseline_rank": 13,
+      "rewrite_rank": 13,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 19,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 62,
+      "query": "the young man is explaining about the product on the table",
+      "rewritten_query": "A young man is standing next to a table, explaining the features of a product displayed on it.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 91,
+      "rewrite_rank": 58,
+      "rank_delta": 33,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 63,
+      "query": "there is a man advertising some products while using a graph",
+      "rewritten_query": "A man is presenting and advertising products while pointing to a graph displayed on a screen.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 7,
+      "rewrite_rank": 5,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 64,
+      "query": "a computer component reviewer talks aobut the improved performance of a recent upgrade",
+      "rewritten_query": "A computer component reviewer explains the enhanced performance and visible improvements after installing a recent hardware upgrade.",
+      "gt_video_id": "video7064",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 65,
+      "query": "a group of many men inspect and test a brand new yellow car",
+      "rewritten_query": "A group of several men closely inspecting and testing a brand new bright yellow car.",
+      "gt_video_id": "video7110",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 66,
+      "query": "there is a man  shooting  other people in a corridor",
+      "rewritten_query": "there is a man  shooting  other people in a corridor",
+      "gt_video_id": "video7110",
+      "baseline_rank": 86,
+      "rewrite_rank": 86,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 67,
+      "query": "a man in blue is interviewed on his yellow car",
+      "rewritten_query": "a man in blue is interviewed on his yellow car",
+      "gt_video_id": "video7110",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 68,
+      "query": "people are diagnosing problems with a vehicle and being interviewed",
+      "rewritten_query": "People inspecting and diagnosing mechanical issues on a vehicle while being interviewed on camera.",
+      "gt_video_id": "video7110",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 69,
+      "query": "media persons are interviewing engineers in the car factory",
+      "rewritten_query": "Journalists and camera crews are interviewing engineers on the assembly line inside a car manufacturing factory.",
+      "gt_video_id": "video7110",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 70,
+      "query": "a cartoon about spongebob sqaurepants",
+      "rewritten_query": "A colorful animated cartoon featuring SpongeBob SquarePants in his underwater world.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 10,
+      "rewrite_rank": 5,
+      "rank_delta": 5,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 71,
+      "query": "a cartoon snail is talking",
+      "rewritten_query": "A close-up of a colorful cartoon snail animatedly talking with visible mouth movements.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 72,
+      "query": "a cartoon snail sings",
+      "rewritten_query": "An animated cartoon snail character singing a song.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 1,
+      "rewrite_rank": 2,
+      "rank_delta": -1,
+      "transition": "hurt_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 73,
+      "query": "a cartoon video for kids",
+      "rewritten_query": "a cartoon video for kids",
+      "gt_video_id": "video7111",
+      "baseline_rank": 100,
+      "rewrite_rank": 100,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 74,
+      "query": "a clip the the cartoon spongebob squarepants",
+      "rewritten_query": "A video clip from the animated cartoon SpongeBob SquarePants featuring underwater scenes and the main character SpongeBob.",
+      "gt_video_id": "video7111",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 75,
+      "query": "men outside playing basketball one of the men keeps missing the basket",
+      "rewritten_query": "A group of men playing basketball outside, with one man repeatedly missing his shots at the basket.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 76,
+      "query": "a couple of guys are shooting basketballs  and they missed the basket each time",
+      "rewritten_query": "Two men repeatedly shooting basketballs and missing the hoop each time on an outdoor court.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 14,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 77,
+      "query": "a man in black playing with a ball",
+      "rewritten_query": "A man dressed in black clothing actively playing with a ball outdoors.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 78,
+      "query": "there is a man in black is throwing a ball",
+      "rewritten_query": "A man dressed in black clothing is throwing a ball.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 3,
+      "rewrite_rank": 3,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 79,
+      "query": "there is a man throwing ball to the basket",
+      "rewritten_query": "A man is throwing a basketball towards a hoop on an outdoor court.",
+      "gt_video_id": "video7112",
+      "baseline_rank": 3,
+      "rewrite_rank": 2,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 80,
+      "query": "there is a dove sitting inside the house",
+      "rewritten_query": "there is a dove sitting inside the house",
+      "gt_video_id": "video7113",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 81,
+      "query": "a white parrot is pecking its feathers and girl approaches it",
+      "rewritten_query": "A white parrot is pecking at its feathers while a girl walks closer to it.",
+      "gt_video_id": "video7113",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "age_sensitive"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 82,
+      "query": "a bird white color is dancing",
+      "rewritten_query": "A white bird performing a dance with visible wing and body movements.",
+      "gt_video_id": "video7113",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 83,
+      "query": "a bird is chirping along its new home the bird looks terrified",
+      "rewritten_query": "a bird is chirping along its new home the bird looks terrified",
+      "gt_video_id": "video7113",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 84,
+      "query": "i see and bird scratching itself and chirping at the same time",
+      "rewritten_query": "i see and bird scratching itself and chirping at the same time",
+      "gt_video_id": "video7113",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 85,
+      "query": "a girl and a man are talking to each other",
+      "rewritten_query": "A young woman and an adult man are standing and having a conversation with each other.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 20,
+      "rewrite_rank": 16,
+      "rank_delta": 4,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 86,
+      "query": "a girl helps a man detective prevent crimes",
+      "rewritten_query": "A young girl assists a male detective in stopping crimes and solving cases.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 14,
+      "rewrite_rank": 11,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 87,
+      "query": "a man and a woman talking to each other",
+      "rewritten_query": "A man and a woman standing and having a conversation while facing each other.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 11,
+      "rewrite_rank": 9,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 88,
+      "query": "a man and woman are seriously discussing about something",
+      "rewritten_query": "A man and a woman are sitting closely and having an intense, serious conversation.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 24,
+      "rewrite_rank": 18,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 89,
+      "query": "a man speaks to a woman in a doorway",
+      "rewritten_query": "A man is standing and speaking to a woman who is standing in a doorway.",
+      "gt_video_id": "video7114",
+      "baseline_rank": 3,
+      "rewrite_rank": 3,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 90,
+      "query": "a man describes a good vehicle at a car show",
+      "rewritten_query": "A man at a car show enthusiastically describes the features of a high-quality vehicle.",
+      "gt_video_id": "video7115",
+      "baseline_rank": 3,
+      "rewrite_rank": 3,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 91,
+      "query": "a man explains a vehicle",
+      "rewritten_query": "A man standing next to a vehicle explains its features in detail.",
+      "gt_video_id": "video7115",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 92,
+      "query": "a man in a showroom standing in front of a black suv",
+      "rewritten_query": "a man in a showroom standing in front of a black suv",
+      "gt_video_id": "video7115",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 93,
+      "query": "a man is describing a vehicle",
+      "rewritten_query": "A man is standing next to a vehicle and explaining its features in detail.",
+      "gt_video_id": "video7115",
+      "baseline_rank": 5,
+      "rewrite_rank": 5,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 94,
+      "query": "a man is describing a vehicle and laughs about making a mistake",
+      "rewritten_query": "A man is talking about a vehicle while laughing and admitting he made a mistake.",
+      "gt_video_id": "video7115",
+      "baseline_rank": 21,
+      "rewrite_rank": 22,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 95,
+      "query": "a female being chastised by a militant for not wearing gloves",
+      "rewritten_query": "a female being chastised by a militant for not wearing gloves",
+      "gt_video_id": "video7116",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 96,
+      "query": "a group of people are walking a woman is talking about their culture",
+      "rewritten_query": "A group of people walking together while a woman speaks about their cultural traditions.",
+      "gt_video_id": "video7116",
+      "baseline_rank": 3,
+      "rewrite_rank": 5,
+      "rank_delta": -2,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 13,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 97,
+      "query": "a group of people outside walking that appear to be muslim",
+      "rewritten_query": "A small group of people wearing traditional Muslim clothing walking together outside.",
+      "gt_video_id": "video7116",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 98,
+      "query": "a group of people walking in a busy street",
+      "rewritten_query": "A group of people walking together on a crowded urban street filled with pedestrians and traffic.",
+      "gt_video_id": "video7116",
+      "baseline_rank": 9,
+      "rewrite_rank": 10,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.75,
+      "reasons": [
+        "count_sensitive",
+        "scene_constraint",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 99,
+      "query": "a group of traditional dressed muslims are filmed before a woman is interviewed",
+      "rewritten_query": "A group of Muslims wearing traditional clothing is shown on camera before a woman in similar attire is interviewed.",
+      "gt_video_id": "video7116",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 100,
+      "query": "a group dancing together",
+      "rewritten_query": "A group of people dancing together in a coordinated manner.",
+      "gt_video_id": "video7117",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 101,
+      "query": "a group of kids dancing and singing on sand",
+      "rewritten_query": "A group of children dancing and singing together on a sandy beach.",
+      "gt_video_id": "video7117",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 102,
+      "query": "a group of kids is dancing and singing on a beach",
+      "rewritten_query": "A group of children dancing and singing together on a sandy beach near the water.",
+      "gt_video_id": "video7117",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 103,
+      "query": "a group of people are dancing on the beach",
+      "rewritten_query": "A small group of people dancing together on a sandy beach near the water.",
+      "gt_video_id": "video7117",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 104,
+      "query": "a group of people are dancing on the beach",
+      "rewritten_query": "A small group of people dancing together on a sandy beach near the water.",
+      "gt_video_id": "video7117",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 105,
+      "query": "a clip from a movie is playing",
+      "rewritten_query": "A video showing a scene from a movie playing on a screen.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 12,
+      "rewrite_rank": 16,
+      "rank_delta": -4,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 106,
+      "query": "a girl in bed knocking on the wall",
+      "rewritten_query": "A young girl lying in bed gently knocking on the wall beside her.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 7,
+      "rewrite_rank": 6,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 107,
+      "query": "a girl in bed",
+      "rewritten_query": "A young girl lying in bed covered with blankets in a softly lit bedroom.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 5,
+      "rewrite_rank": 5,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 108,
+      "query": "a girl is knocking on the wall",
+      "rewritten_query": "A young girl is gently knocking on a plain wall with her hand.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 47,
+      "rewrite_rank": 41,
+      "rank_delta": 6,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 109,
+      "query": "a girl knocking on a wall",
+      "rewritten_query": "A young girl gently knocking her hand against a plain wall.",
+      "gt_video_id": "video7118",
+      "baseline_rank": 49,
+      "rewrite_rank": 39,
+      "rank_delta": 10,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 110,
+      "query": "on abc news a burst of light over carlsbad is being discussed",
+      "rewritten_query": "on abc news a burst of light over carlsbad is being discussed",
+      "gt_video_id": "video7119",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 111,
+      "query": "a news show about an explosion or burst of light in san diego",
+      "rewritten_query": "a news show about an explosion or burst of light in san diego",
+      "gt_video_id": "video7119",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 112,
+      "query": "two news anchors opening a story about a mysterious light in the sky in san diego",
+      "rewritten_query": "Two news anchors sitting at a desk, beginning a broadcast about a mysterious bright light appearing in the night sky over San Diego.",
+      "gt_video_id": "video7119",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 16,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 113,
+      "query": "a male and female newscaster are talking about a strange burst of light",
+      "rewritten_query": "a male and female newscaster are talking about a strange burst of light",
+      "gt_video_id": "video7119",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 114,
+      "query": "a woman in a dress and a man in a suit are talking about a bright light that was seen in the sky",
+      "rewritten_query": "a woman in a dress and a man in a suit are talking about a bright light that was seen in the sky",
+      "gt_video_id": "video7119",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 23,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 115,
+      "query": "athletes are getting ready and start running for an event",
+      "rewritten_query": "Athletes are warming up and beginning to sprint at the start of a race event.",
+      "gt_video_id": "video7131",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 116,
+      "query": "members of a highschool track and field team compete in a foot race",
+      "rewritten_query": "members of a highschool track and field team compete in a foot race",
+      "gt_video_id": "video7131",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 117,
+      "query": "sprinters line up in their blocks and then run a race",
+      "rewritten_query": "sprinters line up in their blocks and then run a race",
+      "gt_video_id": "video7131",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 118,
+      "query": "the athletes gets off the starting point once the referee shots the final shot",
+      "rewritten_query": "the athletes gets off the starting point once the referee shots the final shot",
+      "gt_video_id": "video7131",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 14,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 119,
+      "query": "a segment of an athletic racing is displayed",
+      "rewritten_query": "A video segment showing athletes competing in a close finish during a track race.",
+      "gt_video_id": "video7131",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 120,
+      "query": "a class answering questions about an ebook",
+      "rewritten_query": "a class answering questions about an ebook",
+      "gt_video_id": "video7134",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 121,
+      "query": "a class is being introduced to a digital reading device",
+      "rewritten_query": "a class is being introduced to a digital reading device",
+      "gt_video_id": "video7134",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 122,
+      "query": "a classroom of african students",
+      "rewritten_query": "a classroom of african students",
+      "gt_video_id": "video7134",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 123,
+      "query": "a group of kids using a ereader",
+      "rewritten_query": "A group of children sitting together and using an e-reader device.",
+      "gt_video_id": "video7134",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.4,
+      "reasons": [
+        "count_sensitive",
+        "low_top1"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 124,
+      "query": "a group of students listen to a woman describe a reading tablet",
+      "rewritten_query": "A group of students attentively listen as a woman explains the features of a reading tablet.",
+      "gt_video_id": "video7134",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 125,
+      "query": "a band is singing on a stage at a show",
+      "rewritten_query": "a band is singing on a stage at a show",
+      "gt_video_id": "video7135",
+      "baseline_rank": 71,
+      "rewrite_rank": 71,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.1,
+      "reasons": [
+        "scene_constraint"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 126,
+      "query": "a man in a music video screams shut up a bunch of times",
+      "rewritten_query": "A man in a music video repeatedly screams \"shut up\" with intense emotion.",
+      "gt_video_id": "video7135",
+      "baseline_rank": 29,
+      "rewrite_rank": 20,
+      "rank_delta": 9,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 127,
+      "query": "group of mans perform band high sound in the private place",
+      "rewritten_query": "Group of men playing musical instruments loudly in a private indoor space.",
+      "gt_video_id": "video7135",
+      "baseline_rank": 39,
+      "rewrite_rank": 38,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.65,
+      "reasons": [
+        "count_sensitive",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 128,
+      "query": "a lead singer in face paint is singing a song in a dark tunnel with fire torches  along with a drummer",
+      "rewritten_query": "a lead singer in face paint is singing a song in a dark tunnel with fire torches  along with a drummer",
+      "gt_video_id": "video7135",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 21,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 129,
+      "query": "a man is spinning a vinyl record on a turntable",
+      "rewritten_query": "A man is carefully spinning a vinyl record on a classic turntable with his hand.",
+      "gt_video_id": "video7135",
+      "baseline_rank": 20,
+      "rewrite_rank": 20,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 130,
+      "query": "a man came out of a cake",
+      "rewritten_query": "a man came out of a cake",
+      "gt_video_id": "video7137",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 131,
+      "query": "a man covered in cake being applauded",
+      "rewritten_query": "a man covered in cake being applauded",
+      "gt_video_id": "video7137",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 132,
+      "query": "a man covered with a substance hugging another man",
+      "rewritten_query": "a man covered with a substance hugging another man",
+      "gt_video_id": "video7137",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 133,
+      "query": "a man has jumped out of a cake",
+      "rewritten_query": "A man is jumping out of a large decorated cake during a celebration.",
+      "gt_video_id": "video7137",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 134,
+      "query": "a man is hugging another man while covered in flour",
+      "rewritten_query": "a man is hugging another man while covered in flour",
+      "gt_video_id": "video7137",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 135,
+      "query": "a car drives up and parks in a parking space",
+      "rewritten_query": "a car drives up and parks in a parking space",
+      "gt_video_id": "video7138",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 136,
+      "query": "a car pulling into a parking place",
+      "rewritten_query": "A car slowly pulling into an empty parking space in a parking lot.",
+      "gt_video_id": "video7138",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 137,
+      "query": "a man comparing a white and red car",
+      "rewritten_query": "a man comparing a white and red car",
+      "gt_video_id": "video7138",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 138,
+      "query": "a man drive a car and park and talk",
+      "rewritten_query": "A man driving a car, parking it, and then talking inside or near the vehicle.",
+      "gt_video_id": "video7138",
+      "baseline_rank": 7,
+      "rewrite_rank": 7,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.35,
+      "reasons": [
+        "scene_constraint",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 139,
+      "query": "a man drives a car",
+      "rewritten_query": "A man is shown driving a car from the driver's seat perspective.",
+      "gt_video_id": "video7138",
+      "baseline_rank": 23,
+      "rewrite_rank": 26,
+      "rank_delta": -3,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 140,
+      "query": "a food item is preparing with a floor powder",
+      "rewritten_query": "A person is preparing a food item using flour powder on a kitchen surface.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 6,
+      "rewrite_rank": 4,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 141,
+      "query": "a person is creating a baking mixture batter",
+      "rewritten_query": "A person is mixing ingredients in a bowl to create a baking batter.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 142,
+      "query": "a person is making a dish",
+      "rewritten_query": "A person is preparing and cooking a meal in a kitchen.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 42,
+      "rewrite_rank": 40,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 143,
+      "query": "a person is mixing food ingredients",
+      "rewritten_query": "A person is stirring and combining various food ingredients in a bowl.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 11,
+      "rewrite_rank": 10,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 144,
+      "query": "a person is preparing a recipe",
+      "rewritten_query": "A person is chopping ingredients and mixing them while preparing a recipe in a kitchen.",
+      "gt_video_id": "video7140",
+      "baseline_rank": 27,
+      "rewrite_rank": 25,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 145,
+      "query": "animated models walk down a lighted runway in front of a crowd of people",
+      "rewritten_query": "Animated fashion models walk down a brightly lit runway with an audience watching in the background.",
+      "gt_video_id": "video7141",
+      "baseline_rank": 7,
+      "rewrite_rank": 8,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 14,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 146,
+      "query": "many people watching some stage show of small boy",
+      "rewritten_query": "A large audience watching a stage performance featuring a young boy.",
+      "gt_video_id": "video7141",
+      "baseline_rank": 3,
+      "rewrite_rank": 3,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.95,
+      "reasons": [
+        "age_sensitive",
+        "count_sensitive",
+        "scene_constraint",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object"
+      ]
+    },
+    {
+      "qid": 147,
+      "query": "a man in a red shirt and jeans is walking down a catwalk",
+      "rewritten_query": "a man in a red shirt and jeans is walking down a catwalk",
+      "gt_video_id": "video7141",
+      "baseline_rank": 19,
+      "rewrite_rank": 19,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 148,
+      "query": "its a animated video of cartoons walking on a stage show",
+      "rewritten_query": "its a animated video of cartoons walking on a stage show",
+      "gt_video_id": "video7141",
+      "baseline_rank": 4,
+      "rewrite_rank": 4,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.1,
+      "reasons": [
+        "scene_constraint"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 149,
+      "query": "there is a someone walking on the floor",
+      "rewritten_query": "there is a someone walking on the floor",
+      "gt_video_id": "video7141",
+      "baseline_rank": 74,
+      "rewrite_rank": 74,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 8,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 150,
+      "query": "there is a woman in bridal dress standing on the floor",
+      "rewritten_query": "A woman wearing a white bridal dress is standing on a floor in an indoor setting.",
+      "gt_video_id": "video7142",
+      "baseline_rank": 26,
+      "rewrite_rank": 27,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 151,
+      "query": "a japanese girl with blond hair in a frilly little girl s costume stands holding a toy",
+      "rewritten_query": "A young Japanese girl with blond hair wearing a frilly, childlike costume stands holding a toy.",
+      "gt_video_id": "video7142",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "age_sensitive"
+      ],
+      "token_count": 17,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 152,
+      "query": "a girl dressed up as barbie and holding a doll on the hand",
+      "rewritten_query": "A young girl dressed in a bright pink Barbie costume holding a small doll in her hand.",
+      "gt_video_id": "video7142",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "age_sensitive"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 153,
+      "query": "a girl make up like a barbie holding a teddy and posing to the picture",
+      "rewritten_query": "A young girl with Barbie-style makeup holding a teddy bear and posing for a photo.",
+      "gt_video_id": "video7142",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "age_sensitive",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 154,
+      "query": "a girls in the style of barbie standing with a teddy bear on the room",
+      "rewritten_query": "A girl dressed in Barbie-style clothing standing in a room while holding a teddy bear.",
+      "gt_video_id": "video7142",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.55,
+      "reasons": [
+        "scene_constraint",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 155,
+      "query": "a game of minecraft is being played",
+      "rewritten_query": "a game of minecraft is being played",
+      "gt_video_id": "video7143",
+      "baseline_rank": 12,
+      "rewrite_rank": 12,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 156,
+      "query": "a man describing a videogame",
+      "rewritten_query": "A man speaking directly to the camera while explaining the features of a video game.",
+      "gt_video_id": "video7143",
+      "baseline_rank": 142,
+      "rewrite_rank": 145,
+      "rank_delta": -3,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 157,
+      "query": "a man is describing and playing a video game",
+      "rewritten_query": "a man is describing and playing a video game",
+      "gt_video_id": "video7143",
+      "baseline_rank": 199,
+      "rewrite_rank": 199,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 158,
+      "query": "a man is explaining how to play a pc pokemon game",
+      "rewritten_query": "a man is explaining how to play a pc pokemon game",
+      "gt_video_id": "video7143",
+      "baseline_rank": 36,
+      "rewrite_rank": 36,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 159,
+      "query": "a man is streaming minecraft",
+      "rewritten_query": "A man is live streaming himself playing Minecraft on a computer.",
+      "gt_video_id": "video7143",
+      "baseline_rank": 14,
+      "rewrite_rank": 15,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 160,
+      "query": "a group of woman are bathing a single woman",
+      "rewritten_query": "A group of women are helping one woman bathe in an outdoor setting.",
+      "gt_video_id": "video7144",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 161,
+      "query": "a group of women are massaging a woman",
+      "rewritten_query": "Several women are giving a massage to another woman lying down.",
+      "gt_video_id": "video7144",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 162,
+      "query": "a group of women are rubbing oil and milk all over a woman",
+      "rewritten_query": "A group of women are applying oil and milk onto another woman’s body in a ritualistic or ceremonial setting.",
+      "gt_video_id": "video7144",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.2,
+      "reasons": [
+        "count_sensitive"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 163,
+      "query": "a group of women in bathrobes",
+      "rewritten_query": "A group of women standing together wearing bathrobes.",
+      "gt_video_id": "video7144",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.65,
+      "reasons": [
+        "count_sensitive",
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 164,
+      "query": "a lady gives another lady a rub with music playing",
+      "rewritten_query": "A woman gently rubs another woman's back while music plays in the background.",
+      "gt_video_id": "video7144",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 165,
+      "query": "a wine critic discussing france s leader s plan to raise money for the economy",
+      "rewritten_query": "A wine critic speaking on camera about France's leader outlining a plan to raise funds for the economy.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "low_top1",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 166,
+      "query": "a panel of reporters on television is made up of a woman and two men",
+      "rewritten_query": "A television panel of reporters featuring one woman and two men seated together during a broadcast.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 16,
+      "rewrite_rank": 16,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 167,
+      "query": "the lady tells that she can t see that the economy of francis can be rescued by raising 250 million dollars",
+      "rewritten_query": "the lady tells that she can t see that the economy of francis can be rescued by raising 250 million dollars",
+      "gt_video_id": "video7145",
+      "baseline_rank": 28,
+      "rewrite_rank": 28,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 21,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 168,
+      "query": "a women is talking about the economy of france and about a man feeling the country s pain",
+      "rewritten_query": "A woman is speaking about France's economy while describing a man who empathizes deeply with the country's struggles.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 52,
+      "rewrite_rank": 45,
+      "rank_delta": 7,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 18,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 169,
+      "query": "women with straight blonde hair and glasses talks while wearing a red shirt and a black jacket",
+      "rewritten_query": "A woman with straight blonde hair and glasses speaking, dressed in a red shirt and a black jacket.",
+      "gt_video_id": "video7145",
+      "baseline_rank": 2,
+      "rewrite_rank": 1,
+      "rank_delta": 1,
+      "transition": "fixed_to_top1",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 17,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 170,
+      "query": "a black dog slides down the stairs",
+      "rewritten_query": "a black dog slides down the stairs",
+      "gt_video_id": "video7146",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 171,
+      "query": "a dog is getting down the stairs",
+      "rewritten_query": "a dog is getting down the stairs",
+      "gt_video_id": "video7146",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 172,
+      "query": "a dog is sliding down a flight of stairs",
+      "rewritten_query": "a dog is sliding down a flight of stairs",
+      "gt_video_id": "video7146",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 173,
+      "query": "a dog walking down stairs",
+      "rewritten_query": "a dog walking down stairs",
+      "gt_video_id": "video7146",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 174,
+      "query": "a person trying to walk a puppy down the stairs",
+      "rewritten_query": "a person trying to walk a puppy down the stairs",
+      "gt_video_id": "video7146",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 175,
+      "query": "a guy adds bacon to burgers he s grilling",
+      "rewritten_query": "A man places strips of bacon on burgers while grilling them outdoors.",
+      "gt_video_id": "video7147",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 176,
+      "query": "a man cooking food",
+      "rewritten_query": "A man preparing and cooking food in a kitchen.",
+      "gt_video_id": "video7147",
+      "baseline_rank": 11,
+      "rewrite_rank": 12,
+      "rank_delta": -1,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 177,
+      "query": "a man cooks burgers and bacon on a grill",
+      "rewritten_query": "a man cooks burgers and bacon on a grill",
+      "gt_video_id": "video7147",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 178,
+      "query": "a man cooks burgers on the grill",
+      "rewritten_query": "A man grilling multiple burgers over an open flame on an outdoor barbecue grill.",
+      "gt_video_id": "video7147",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 179,
+      "query": "a man grilling burgers",
+      "rewritten_query": "A man cooking multiple burgers on an outdoor grill with visible flames.",
+      "gt_video_id": "video7147",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 4,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 180,
+      "query": "a chef cooks a meal",
+      "rewritten_query": "A chef wearing a white uniform prepares and cooks a meal in a kitchen.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 13,
+      "rewrite_rank": 12,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 5,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 181,
+      "query": "a chef gives instructions to cook a recipe",
+      "rewritten_query": "A chef standing in a kitchen clearly explaining step-by-step instructions to cook a recipe.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 18,
+      "rewrite_rank": 17,
+      "rank_delta": 1,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 8,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 182,
+      "query": "a chef is cooking in the kithen",
+      "rewritten_query": "A chef is preparing food while cooking in a kitchen with visible utensils and appliances.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 13,
+      "rewrite_rank": 10,
+      "rank_delta": 3,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 183,
+      "query": "a chef is showing how to make a recipe",
+      "rewritten_query": "A chef demonstrating step-by-step how to prepare and cook a recipe in a kitchen.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 5,
+      "rewrite_rank": 5,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 9,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 184,
+      "query": "a chef pours flower into the pan",
+      "rewritten_query": "A chef pours flour from a container into a hot pan on the stove.",
+      "gt_video_id": "video7148",
+      "baseline_rank": 10,
+      "rewrite_rank": 5,
+      "rank_delta": 5,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 185,
+      "query": "a commercial gives descriptions of virtuous characteristics of a good woman",
+      "rewritten_query": "A commercial describing the virtuous qualities and admirable traits of a good woman through spoken narration and visual storytelling.",
+      "gt_video_id": "video7149",
+      "baseline_rank": 6,
+      "rewrite_rank": 4,
+      "rank_delta": 2,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 186,
+      "query": "a few brief clips of a woman showing plot points for a show",
+      "rewritten_query": "Short video clips of a woman explaining key plot points of a television show.",
+      "gt_video_id": "video7149",
+      "baseline_rank": 182,
+      "rewrite_rank": 140,
+      "rank_delta": 42,
+      "transition": "improved_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 187,
+      "query": "a message about too much drinking",
+      "rewritten_query": "a message about too much drinking",
+      "gt_video_id": "video7149",
+      "baseline_rank": 18,
+      "rewrite_rank": 18,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 6,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing",
+        "short_query"
+      ]
+    },
+    {
+      "qid": 188,
+      "query": "a movie trailer about a woman in a volatile relationship",
+      "rewritten_query": "a movie trailer about a woman in a volatile relationship",
+      "gt_video_id": "video7149",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 189,
+      "query": "a moving starring jane campion is shown",
+      "rewritten_query": "a moving starring jane campion is shown",
+      "gt_video_id": "video7149",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 7,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 190,
+      "query": "a baseball player in a red uniform while music plays",
+      "rewritten_query": "a baseball player in a red uniform while music plays",
+      "gt_video_id": "video7150",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 191,
+      "query": "some one showing the video of best moment of the match",
+      "rewritten_query": "A person presenting a video compilation of the most exciting and memorable moments from a sports match.",
+      "gt_video_id": "video7150",
+      "baseline_rank": 201,
+      "rewrite_rank": 288,
+      "rank_delta": -87,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": true,
+      "issue_tags": [
+        "generic_object",
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 192,
+      "query": "a tsunami (original mix) is playing while there is a picture of an angels baseball player onscreen",
+      "rewritten_query": "a tsunami (original mix) is playing while there is a picture of an angels baseball player onscreen",
+      "gt_video_id": "video7150",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 17,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 193,
+      "query": " tsunami set to the image of a baseball player in red",
+      "rewritten_query": " tsunami set to the image of a baseball player in red",
+      "gt_video_id": "video7150",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 194,
+      "query": "a baseball player in red is seen as a bass filled electronic music piece plays",
+      "rewritten_query": "a baseball player in red is seen as a bass filled electronic music piece plays",
+      "gt_video_id": "video7150",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 15,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 195,
+      "query": "a clip from a show about building and testing machinery",
+      "rewritten_query": "A video clip from a show demonstrating the process of constructing and testing mechanical machinery.",
+      "gt_video_id": "video7151",
+      "baseline_rank": 25,
+      "rewrite_rank": 31,
+      "rank_delta": -6,
+      "transition": "worse_rank",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 10,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing",
+        "attribute_missing"
+      ]
+    },
+    {
+      "qid": 196,
+      "query": "a man dressed like a pirate talking about the electric chair",
+      "rewritten_query": "A man wearing a pirate costume speaking about the electric chair.",
+      "gt_video_id": "video7151",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.25,
+      "reasons": [
+        "small_margin"
+      ],
+      "token_count": 11,
+      "has_generic_language": false,
+      "issue_tags": [
+        "weak_action",
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 197,
+      "query": "a man dressed like a pirate while a man talks about his motorized chair",
+      "rewritten_query": "a man dressed like a pirate while a man talks about his motorized chair",
+      "gt_video_id": "video7151",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 14,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 198,
+      "query": "a man in a chair and another man wearing a pirate hat",
+      "rewritten_query": "a man in a chair and another man wearing a pirate hat",
+      "gt_video_id": "video7151",
+      "baseline_rank": 1,
+      "rewrite_rank": 1,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": false,
+      "ambiguity_score": 0.0,
+      "reasons": [],
+      "token_count": 12,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    },
+    {
+      "qid": 199,
+      "query": "a man is sitting in a electric chair another one is standing near",
+      "rewritten_query": "A man is seated in an electric chair while another man stands close beside him.",
+      "gt_video_id": "video7151",
+      "baseline_rank": 2,
+      "rewrite_rank": 2,
+      "rank_delta": 0,
+      "transition": "unchanged",
+      "used_rewrite": true,
+      "ambiguity_score": 0.45,
+      "reasons": [
+        "count_sensitive",
+        "small_margin"
+      ],
+      "token_count": 13,
+      "has_generic_language": false,
+      "issue_tags": [
+        "scene_missing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "video_id": "video8799",
+  "segment_id": "video8799_seg0000",
+  "llm_score": 70,
+  "reason": "The animated letters with faces suggest a cartoon style, fitting the announcement theme, but no explicit event or fake show is shown.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 232,
+    "output_tokens": 33,
+    "total_tokens": 265
+  },
+  "retrieval_rank": 1,
+  "retrieval_score": 0.3022345304489136,
+  "start_sec": 0.0,
+  "end_sec": 13.666666666666666,
+  "semantic_summary": "Animated letters with faces and arms appear in a spotlight on a wooden floor.",
+  "semantic_tags": [
+    "animated letters",
+    "spotlight",
+    "wooden floor",
+    "cartoon",
+    "character",
+    "face",
+    "arms",
+    "rocking chair"
+  ]
+}

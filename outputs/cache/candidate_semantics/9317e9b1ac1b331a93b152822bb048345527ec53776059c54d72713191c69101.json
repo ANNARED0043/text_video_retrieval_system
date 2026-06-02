@@ -1,0 +1,24 @@
+{
+  "video_id": "video7741",
+  "segment_id": "video7741_seg0000",
+  "summary": "Characters are shown indoors, a man in a racing suit holds a photo in front of a crowd, and three commentators are seated at a broadcast desk.",
+  "tags": [
+    "indoor",
+    "living room",
+    "window",
+    "mountain",
+    "man",
+    "racing suit",
+    "photo",
+    "crowd",
+    "commentators",
+    "broadcast desk",
+    "headphones"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 60,
+    "total_tokens": 488
+  }
+}

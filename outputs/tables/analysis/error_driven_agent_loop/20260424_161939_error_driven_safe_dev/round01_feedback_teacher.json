@@ -1,0 +1,17 @@
+{
+  "queries": 500,
+  "out_memory": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_161939_error_driven_safe_dev\\round01_feedback_memory.jsonl",
+  "out_teacher": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\error_driven_agent_loop\\20260424_161939_error_driven_safe_dev\\round01_feedback_teacher.jsonl",
+  "search_topk": 30,
+  "teacher_topk": 20,
+  "checkpoint": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage3_alignment_multiview_v35_1kA_train500_eval200_gpu_v1.pt",
+  "failed_only": true,
+  "min_gt_rank": 1,
+  "max_gt_rank": 30,
+  "selected_rows": 201,
+  "top1_is_gt_rate": 0.284,
+  "gt_rank_mean": 227.28,
+  "gt_rank_median": 6.0,
+  "selected_gt_rank_mean": 7.880597,
+  "selected_gt_rank_median": 5.0
+}

@@ -1,0 +1,30 @@
+{
+  "video_id": "video9969",
+  "segment_id": "video9969_seg0000",
+  "llm_score": 0,
+  "reason": "The video shows two women with a cat, not a woman cuddling a brown, black, and white puppy.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 258,
+    "output_tokens": 31,
+    "total_tokens": 289
+  },
+  "retrieval_rank": 3,
+  "retrieval_score": 0.202575221657753,
+  "start_sec": 0.0,
+  "end_sec": 12.666666666666666,
+  "semantic_summary": "Two women are sitting on a bed, talking, with one holding a cat and the other holding a cup.",
+  "semantic_tags": [
+    "two women",
+    "bed",
+    "cat",
+    "cup",
+    "string lights",
+    "colorful ornaments",
+    "casual clothing",
+    "indoor",
+    "conversation"
+  ]
+}

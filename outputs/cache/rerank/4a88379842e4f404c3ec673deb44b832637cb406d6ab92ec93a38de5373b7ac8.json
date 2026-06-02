@@ -1,0 +1,28 @@
+{
+  "video_id": "video8837",
+  "segment_id": "video8837_seg0000",
+  "llm_score": 70,
+  "reason": "The candidate shows a person interacting playfully with a puppy indoors, which partially matches the query but lacks specific details about a black hoodie and cuddling.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 260,
+    "output_tokens": 38,
+    "total_tokens": 298
+  },
+  "retrieval_rank": 1,
+  "retrieval_score": 0.33966630697250366,
+  "start_sec": 0.0,
+  "end_sec": 25.666666666666668,
+  "semantic_summary": "A person smiles while lying down, then interacts with a puppy by letting it nibble their finger, and finally reaches out to the puppy on a couch.",
+  "semantic_tags": [
+    "person",
+    "puppy",
+    "couch",
+    "hand",
+    "smiling",
+    "indoor",
+    "playful interaction"
+  ]
+}

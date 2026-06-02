@@ -1,0 +1,20 @@
+{
+  "video_id": "video8837",
+  "segment_id": "video8837_seg0000",
+  "summary": "A person smiles while lying down, then interacts with a puppy by letting it nibble their finger, and finally reaches out to the puppy on a couch.",
+  "tags": [
+    "person",
+    "puppy",
+    "couch",
+    "hand",
+    "smiling",
+    "indoor",
+    "playful interaction"
+  ],
+  "cache_hit": false,
+  "usage": {
+    "input_tokens": 428,
+    "output_tokens": 51,
+    "total_tokens": 479
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAfull_lowmem_v1",
+  "time": "2026-05-04T17:59:37",
+  "metrics": {
+    "R@1": 39.1,
+    "R@5": 61.6,
+    "R@10": 72.1
+  },
+  "best_method": "adapter",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage4_queryaware_multiview_attention_pairwise_teacher_q500_eval1kAfull_lowmem_v1.json"
+}

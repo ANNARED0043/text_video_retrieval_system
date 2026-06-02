@@ -1,0 +1,45 @@
+{
+  "dataset": "MSR-VTT",
+  "protocol": "1k-A",
+  "manifest": "msrvtt_fixed_1kA_pooling_smoke200.jsonl",
+  "queries": "msrvtt_1kA_pooling_smoke200_queries.jsonl",
+  "pooling": "max",
+  "model_name": "ViT-H-14",
+  "pretrained": "laion2b_s32b_b79k",
+  "index": "faiss_flat_ip",
+  "aggregation": "max",
+  "topk_segments": 200,
+  "queries_planned": 200,
+  "elapsed_s": 6.56,
+  "metrics": {
+    "R@1": 40.5,
+    "R@5": 64.5,
+    "R@10": 77.5,
+    "MedR": 2.0,
+    "MnR": 11.225,
+    "N": 200
+  },
+  "latency": {
+    "elapsed_s": 6.562,
+    "N": 200,
+    "search_ms": {
+      "avg": 32.563,
+      "p50": 29.921,
+      "p90": 35.636,
+      "p95": 37.583
+    },
+    "aggregate_ms": {
+      "avg": 0.062,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0
+    },
+    "total_ms": {
+      "avg": 32.626,
+      "p50": 29.938,
+      "p90": 35.636,
+      "p95": 37.583
+    }
+  },
+  "time": "2026-04-28T23:10:53"
+}

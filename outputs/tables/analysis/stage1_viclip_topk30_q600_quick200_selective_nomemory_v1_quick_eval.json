@@ -1,0 +1,11 @@
+{
+  "stage_label": "stage1_viclip_topk30_q600_quick200_selective_nomemory_v1",
+  "time": "2026-04-07T23:56:40",
+  "metrics": {
+    "R@1": 47.5,
+    "R@5": 65.0,
+    "R@10": 72.0
+  },
+  "best_method": "baseline",
+  "summary_json": "E:\\BISHE\\video_retrieval_system\\outputs\\tables\\analysis\\stage1_viclip_topk30_q600_quick200_selective_nomemory_v1.json"
+}

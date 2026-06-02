@@ -1,0 +1,30 @@
+{
+  "video_id": "video9828",
+  "segment_id": "video9828_seg0000",
+  "llm_score": 0,
+  "reason": "The video features a woman with exotic pets, not a woman cuddling a brown, black, and white puppy.",
+  "cache_hit": false,
+  "model": "gpt-4.1-mini",
+  "prompt_version": "v2_semantic",
+  "usage": {
+    "input_tokens": 268,
+    "output_tokens": 31,
+    "total_tokens": 299
+  },
+  "retrieval_rank": 5,
+  "retrieval_score": 0.1947314739227295,
+  "start_sec": 0.0,
+  "end_sec": 12.666666666666666,
+  "semantic_summary": "Paris Hilton holds a baby kinkajou named Baby Luv, and Dan Bilzerian holds a pet goat named Zeus.",
+  "semantic_tags": [
+    "Paris Hilton",
+    "baby kinkajou",
+    "small animal",
+    "Dan Bilzerian",
+    "pet goat",
+    "outdoor",
+    "close-up",
+    "sunglasses",
+    "denim jacket"
+  ]
+}
